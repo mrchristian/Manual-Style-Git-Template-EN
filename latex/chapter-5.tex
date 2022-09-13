@@ -1,0 +1,275 @@
+\documentclass{article}
+
+\usepackage{caption}
+\usepackage{tabu}
+\begin{document}
+
+\title{Step 4: Publish as Multi‑format!}
+
+\maketitle
+
+
+What is covered in the quick start guide for multi-format publishing.
+
+
+For users of the system you will only need to select your layout design style from the available library of style and click output.
+
+\begin{enumerate}
+\item First the system can create many outputs from one source as 'Publication Ready Outputs' (PROs)\protect\footnotemark{}, as well as output additional interoperable and machine readable formats. 
+
+
+\item The system can apply pre-made reusable templates of \textbf{'layout design styles'} with automate machine typesetting.
+
+
+\item Save out styled output formats to Git at the push of a button, or preview the outputs direct from the system. Note the PDF format needs to be saved locally and then uploaded to Git (this will be automated in the near future, Sept 2022).
+
+
+\end{enumerate}\addtocounter{footnote}{-1}\stepcounter{footnote}
+\footnotetext{A Publication Ready Output (PRO) means that the format is ready for professional publishing, including typesetting, metadata, and other formatting and settings. Many systems can save files in a format, for example as HTML, or PDF - but it does not mean it can be used professionally. Microsoft Word can save as HTML or PDF but it doesn't make the formatted files into finished publications ready for distribution.}
+
+\subsection{Output formats we'll cover here}\label{H6462932}
+
+
+
+Other format outputs are listed in the System Configurations and Settings section.
+
+\begin{itemize}
+\item Website
+
+
+\item Paginated Web
+
+
+\item PDF
+
+
+\item Print-on-demand (PDF)
+
+
+\item e-Book
+
+
+\end{itemize}
+\begin{table}
+\caption*{Table 1: Starter output formats. More formats are available but to start with we'll cover the set below.}\label{T34310601}
+
+\begin{tabu} to \textwidth { |X|X|X|X|X|X| }
+\hline
+
+
+
+\textbf{Formats >>>} & Website & Paginated Web & PDF & Print-on-Demand (PDF) & e-Book
+ \\
+
+
+\textbf{Examples} & Template (to be provided) LINK & - & - & - & -
+ \\
+
+
+\textbf{Features} & Mobile first responsive & Fixed page & Screen PDF (symmetrical margins) & Print from one copy at a time. (recto - verso margins) & Use on e-Readers and distribute through book trade.
+ \\
+
+
+\textbf{Running header / footer} & Place in left menu & yes & yes &  & n /a
+ \\
+
+
+\textbf{Date (custom formats)} & Place in left menu & yes & yes &  & Inline
+ \\
+
+
+\textbf{Version (From Fidus book version No.)} & Place in left menu & yes & yes &  & Inline
+ \\
+
+
+\textbf{Comments} &  &  &  &  & 
+ \\
+
+
+\textbf{Fidus exports used to make output formats.}  & UHTML\footnote{UHTML - This stands for unified HTML. The Fidus exporter concatonates all the Document HTML files into one single HTML file.} & UHTML & PDF & PDF + Cover PDF (made seperately)\footnote{Cover PDF. Covers for print-on-demand (PoD) need to be be made seperately at present due to different requirements made by PoD printers.} & EPUB
+ \\
+\hline
+
+\end{tabu}\end{table}
+
+
+\subsection{Preview outputs}\label{H5954601}
+
+
+
+You can download any of your outputs locally from the book dialogues window.
+
+
+See notes on PDF export below.
+
+
+PIC 
+
+
+\subsection{Applying layout design styles and Git export}\label{H2238943}
+
+
+
+1. Navigate to the book area of the site and here click on your book to open its dialog box.
+
+
+PIC book area
+
+
+PIC book dialogue
+
+
+2. Choose your book \textbf{'layout design style'. }From the 'Print / PDF' tab you need to choosen your book style. As an example your can use 'Report 001' for an DIN A4 orientated layout style. Choosing a style will typeset all your outputs and you can change style at any time, or add and modify styles.
+
+
+For your e-book you will need to add cover artwork in the Epub tab of your book information. You can upload a image file here. The artwork can be from the cover of your PDF or from any other source. Use a JPEG file at a size of 2560 px x 1600 px or close to this. E-book platforms request different sizes, here we have used Amazon Kindle sizes as of January 2022.
+
+
+2. In the book dialogue box select the tab on the right Git repository.
+
+
+3. In the Git repository tab slect the following: the reposity you want to save to (this will already be selected if you used the earlier guide setup); the output formats you want to use, and then from the export button bottom right select 'Export to Git repository'.
+
+
+PIC Git settings - hightlight 3 options from above
+
+
+PIC Export to Git repository - selection
+
+
+4. A Git dialogue will now appear called 'Commit message'. This is a note about the export you will make to Git and it will appear in the file listing for this git export. The pupose of the note is to inform other team members or Git users about your export, for example what kind of updates were made. A Commit message should be informative and you can pick your own style, noting these may be public if the Gitrepo is public.   
+
+
+Click save and the export will start. The system will give you updates on the progress bottom right.
+
+
+PIC Git export dialogue  'Commit message'
+
+
+PIC Progress messages.
+
+
+4. You can now save your book settings in the book dialogue box.
+
+
+PIC book dialogue box.
+
+
+5. Your export is now complete and your publication will now be on Git.
+
+
+PIC Git - formats
+
+
+PIC website 
+
+
+From the Git export you can either have the Git content be public or private. Additionally you can manually or automatically have content distributed to other storage locations or systems.
+
+
+\subsection{Exporting PDF to Git}\label{H9093471}
+
+
+
+PDF outputs need to be saved locally and then uploaded to Git. 
+
+
+Here we will create our local PDF from the browser, save it locally and then log onto Git in the browser and upload the PDF.
+
+
+1. In the book dialogue box select select print/pdf export.
+
+
+PIC export as PDF button.
+
+
+2. Now we will have your browser Print / PDF export dialogue box appear and there are some settings that need to be checked before we save the PDF file to your computer. 
+
+
+a. Set output as PDF.
+
+
+b. Set margin to none.
+
+
+c. have include background graphics checked as on.
+
+
+Now click save and name the PDF 'book.pdf'. It is important to use this naming as Git then recognises the PDF and adds it to the website it makes with Git Pages. Save the file locally.
+
+
+PIC PDF output box
+
+
+3. Now upload the file to Git. Navigate to your repo in your browser, log into Git.
+
+
+PIC upload to Git
+
+
+Now you are at your repo's top level view you can upload the book.pdf file. Click add file top right, select your book.pdf file, add a 'commite message', and click upload. Your book.pdf file need to be in the top level of your repo. See the screenshot below.
+
+
+The process is now complete and shortly the the PDF will appear in your website top menu.
+
+
+PIC website PDF menu.
+
+
+\subsection{Multi-format publishing configurations}\label{H6290333}
+
+
+
+You can output as wide variety of Publication Ready Output formats as well as interoperable formats for a number of different uses, as well as the main source files from Fidus Writer as JSON files.
+
+
+To read more about other formats and advanced settings see the System Configurations and Settings guide section.
+
+
+\subsubsection{Recommended minimum default output}\label{H2167774}
+
+
+
+Outputting a website, paginated web version, and PDF will be enough for readers. For this setting choose: UHTML, PDF as output types and you will have all you need for these outputs.
+
+
+\subsubsection{Creating print-on-demand publications}\label{H6991098}
+
+
+
+The full process for print-on-demand (PoD) outputs is outside of the scope of this guide, but here is an outline of the steps involved.
+
+
+As an introduction to PoD this is a print process where you can deposit your book with a printer who will make the book available to customers worldwide on the web via book retail websites and when the customer orders a book it is printed as an individual copy locally and shipped to them. As the publisher you do not have to pay for the printing or shipping, insteads this is deducted form the customer payment. As the publisher you are compensated for the sale, minus the book costs. You can also make your own bulk orders as the wholesale print cost.
+
+
+PoD can also be used for private publication only used internally too.
+
+
+You will need an ISBN number to distribute the publication. You do not need an ISBN if you use PoD for private orders with books you do not publically distribute.
+
+
+\subsubsection{Steps to enable Print-on-demand}\label{H855085}
+
+
+\begin{itemize}
+\item Create an account with a PoD provider like Ingram Lightning Source for professional PoD or Ingram Spark for one-off self publishing.
+
+
+\item Make a book cover and upload your bookblock made in the PoD system.
+
+
+\item Set the sales price. The price can allow a surplus, or be set to break even, or even be subsidised. 
+
+
+\item Publish. Your book will then go live on many retailers and you are compensated for sales monthly. 
+
+
+\end{itemize}
+
+
+
+
+
+
+\end{document}

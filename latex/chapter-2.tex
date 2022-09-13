@@ -1,0 +1,212 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{caption}
+                
+\usepackage[backend=biber,hyperref=false,citestyle=authoryear,bibstyle=authoryear]{biblatex}
+                
+\bibliography{bibliography}
+            
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
+\begin{document}
+
+\title{Step 1: Make a Publication Git Repository and Website}
+
+\maketitle
+
+
+The Git repository (repo) is the storage location of your outputted publication which is connected to the net. A website can also be made from the repo with a selected content being made public. When your repo is updated, so is your website.
+
+\begin{figure}
+\scaledgraphics{f8bbd94d-f20e-4bbe-b9d3-9b043bedfdb7.png}{0.5}
+\caption*{Example Git repository}\label{F55869431}
+\end{figure}
+
+\begin{figure}
+\scaledgraphics{d7cbcac6-ef5e-484d-850a-d174a6888644.png}{0.5}
+\caption*{Example publication which is a presentation of the repository above}\label{F88093361}
+\end{figure}
+
+
+\subsection{About}\label{H4018151}
+
+
+
+The repository uses \href{https://git-scm.com/}{Git}\footnote{Git is open-source software that both \href{https://github.com/}{GitHub} and \href{https://about.gitlab.com/}{GitLab} are built on – think of it as a 'time machine for code' and all that could do.} technology which allows for versioning of your publication. 
+
+
+We save to GitHub and GitLab \autocite{PerkelJeffrey2016}. GitLab can be used as \href{GitLab.com}{GitLab.com} or as a self-hosted instance for public and private publications, or for staging publications for later transfer to another repo. We use GitLab Community Edition (GitLab CE) for self-hosting which is open-source software. GitHub is not open-source but is useful for publication distribution and visibility.
+
+\begin{figure}
+\scaledgraphics{26972b81-3aa5-42db-9da6-7ab6ab269dc3.jpg}{0.5}
+\caption*{Git logo}\label{F22345641}
+\end{figure}
+
+\begin{figure}
+\scaledgraphics{db781e4a-0460-4824-8351-05102a800d4e.jpg}{0.5}
+\caption*{Octocat: GitHub's mascot}\label{F44428261}
+\end{figure}
+
+\begin{figure}
+\scaledgraphics{6c70c3fd-31ab-446b-bfe3-5a7ee1e2f98f.png}{0.5}
+\caption*{GitLab logo}\label{F88034391}
+\end{figure}
+
+
+\subsection{Step-by-step guide}\label{H1473428}
+
+
+
+These instructions are for using GitHub. The principles are the same for GitLub.
+
+
+These steps will allow you to create a repository to for your publication with the option for a website.
+
+
+\subsubsection{Create a repo}\label{H2479402}
+
+
+
+Use a GitHub Template Repository (Repo)
+
+
+You will create a prepopulated GitHub template repository for you publication. The template repo contains components for creating the website and providing links to the other publication formats in the website.
+
+
+Navigate to the \href{https://github.com/}{template repo} and click the green button 'Use this template'.
+
+\begin{figure}
+\scaledgraphics{cf59aade-4378-43a9-a64e-76013b4147a0.png}{1}
+\caption*{Example template repository}\label{F25312281}
+\end{figure}
+
+
+Then choose \textbf{where you will make the new repo} and \textbf{its name}. Once chosen click 'Create repository from this template'.
+
+\begin{figure}
+\scaledgraphics{2a593a12-e21b-478e-8943-f75fdc9dd278.png}{1}
+\caption*{Name your repo}\label{F25227021}
+\end{figure}
+
+
+\textbf{Where to save your repo?} In GitHub you can save repos with organisations or in your personal account, select this under the field labeled 'Owner'.
+
+
+\textbf{How to name your repo?} The name of the repo will be its display name and URL address. It is good practice to adopt a naming convention style to be inline with other publications, this might be a short title, or even an acronym. Note it is good practice to use only lowercase in the name as the URL is case sensitive. Names can be changed at any time but it will change any associated URLs.
+
+
+Note: Repo names can be changed at any time, but this will change the website URL to be the new name and you must remember to update the URL in other places where you have used the URL address.
+
+
+\textbf{Other settings:} You can give the repo a description; make the repo public is the default, and the click greed button.
+
+\begin{enumerate}
+\item 
+
+
+\subsubsection{Create a website}\label{H9225084}
+
+
+
+GitHub has a service called GitHub Pages. This creates free websites on the domain github.io or you can use your own custom domain. The default URL address pattern is https://organisation-name.github.io/publication-name/. The content from your repo will be available on the URL. 
+
+
+Note: Websites can be given custom domain names. You will need to consult GitHub documentation to enable this feature.
+
+
+This is a two part process.
+
+
+\textbf{Part 1:}
+
+\begin{figure}
+\scaledgraphics{cd4aad9d-5d95-4ecd-944d-f1f6ce8e75f3.png}{1}
+\label{F72332451}
+\end{figure}
+
+
+Navigate to 'Settings' in the top horizontal options. In settings on the left menu select 'Pages'. In the dialog in the main page use the following settings: Select branch - main; select folder - root, and; click save. This will complete the site creation and give you a URL for your website. Copy the URL and you can then use it to add address to front end of the repo.
+
+\begin{figure}
+\scaledgraphics{d941d969-3938-4dec-aa57-a45debb46e84.png}{1}
+\label{F78400191}
+\end{figure}
+
+
+To paste the site name into the front end of your repo first go to the front end of the repo by clicking <code>. To the right click the cog next to About and in here you can paste in the URL and save.
+
+\begin{figure}
+\scaledgraphics{7b251363-3e8f-4da0-9185-bb245e4aaa97.png}{1}
+\label{F80239021}
+\end{figure}
+
+
+You will now have a website and the address appears top right.
+
+\begin{figure}
+\scaledgraphics{8a364c1f-1553-4b44-9974-77307c345b2e.png}{1}
+\label{F8612631}
+\end{figure}
+
+
+Your website will look like this. Currently the site will contain benchmark content to demonstate that layout features are working correctly. This content will be removed once you output your publication.
+
+\begin{figure}
+\scaledgraphics{a0b7b868-c526-485f-8f20-c2460cb693ac.png}{1}
+\label{F85415421}
+\end{figure}
+
+
+\textbf{Part 2:}
+
+
+To enable the Paginated Web version of your publication the repo address needs to be added to the setup.json file in the top level of your repo.
+
+\begin{figure}
+\scaledgraphics{fde2c425-6646-447e-94ee-d0d93459de8a.png}{1}
+\label{F23728731}
+\end{figure}
+
+
+Edit the file setup.json and add in the organisation name and repo name into line 3 and save at the bottom of the page. "repoURL": "https://github.com/organisation-name/publication-name/".
+
+\begin{figure}
+\scaledgraphics{a4d479fd-2aea-4114-8740-571c5d952b93.png}{1}
+\label{F41371831}
+\end{figure}
+
+\begin{figure}
+\scaledgraphics{693958a1-b909-4dfd-ac6a-0ede6a0c344b.png}{1}
+\label{F50720561}
+\end{figure}
+
+
+\end{enumerate}
+
+\subsection{Step 1 completion: What's next?}\label{H4342812}
+
+
+
+Now that you have your repo and website setup, next you will set-up a book project in Fidus Writer and connect it to your Git repo, this will allow you to output book files from Fidus Writer to Git.
+
+
+
+
+
+\printbibliography[title={Bibliography}]
+\end{document}

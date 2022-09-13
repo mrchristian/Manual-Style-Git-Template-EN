@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Quick Start Guide</title>
+    <link type="text/css" rel="stylesheet" href="css/book.css" />
+    <style>
+      a.fn {
+        -adapt-template: url(data:application/xml,%3Chtml%20xmlns=%22http://www.w3.org/1999/xhtml%22%20xmlns:s=%22http://www.pyroxy.com/ns/shadow%22%3E%3Chead%3E%3Cstyle%3E.footnote-content%7Bfloat:footnote%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Cs:template%20id=%22footnote%22%3E%3Cs:content/%3E%3Cs:include%20class=%22footnote-content%22/%3E%3C/s:template%3E%3C/body%3E%3C/html%3E#footnote);
+        text-decoration: none;
+        color: inherit;
+        vertical-align: baseline;
+        font-size: 70%;
+        position: relative;
+        top: -0.3em;
+      }
+      body {
+        background-color: white;
+      }
+      section[role=doc-footnote] .footnote-counter:after {
+        content: ". ";
+      }
+      section.fnlist {
+        display: none;
+      }
+      section:footnote-content {
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+      }
+      .table-of-contents a {
+        display: inline-flex;
+        width: 100%;
+        text-decoration: none;
+        color: currentColor;
+        break-inside: avoid;
+        align-items: baseline;
+      }
+      .table-of-contents a::before {
+        margin-left: 1px;
+        margin-right: 1px;
+        border-bottom: solid 1px lightgray;
+        content: "";
+        order: 1;
+        flex: auto;
+      }
+      .table-of-contents a::after {
+        text-align: right;
+        content: target-counter(attr(href, url), page);
+        align-self: flex-end;
+        flex: none;
+        order: 2;
+      }
+      @page {
+        size: A4;
+        @top-center {
+          content: env(doc-title);
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+      @page :first {
+        @bottom-center {
+          content: normal;
+        }
+        @top-center {
+          content: normal;
+        }
+      }
+      figure img {
+        max-width: 100%;
+      }
+      .article-title {
+        page-break-before: right;
+      }
+      h1.part {
+        page-break-before: right;
+      }
+      .copyrightpage {
+        page-break-before: left;
+      }
+      .tocpage {
+        page-break-before: right;
+      }
+      .booktitle {
+        text-align: center;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/report001.css" />
+  </head>
+  <body class="user-contents">
+    <div class="titlepage frontmatter">
+      <h1 class="booktitle">Quick Start Guide</h1>
+      <h2 class="booksubtitle">ADA Publishing Pipeline</h2>
+      <h3 class="bookauthor">von NextGenBooks</h3>
+      <h4 class="bookversion">Draft v0.1</h4>
+    </div>
+    <div class="copyrightpage frontmatter">
+      <p>Publiziert von: OSL</p>
+      <p>Zuletzt verändert: 2022-09-12</p>
+      <p>Erstellt: 2022-05-24</p>
+      <p>Sprache: Deutsch</p>
+      <p>Erstellt von: User Name</p>
+    </div>
+    <div class="tocpage frontmatter">
+      <nav role="doc-toc">
+        <ol>
+          <li>
+            <a href="#_1_0">
+              Welcome to the Publishing Pipeline!
+            </a>
+            <ol>
+              <li>
+                <a href="#H4632171">
+                  What you'll need before you start
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H5614484">
+                      For contributors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H9374516">
+                      For publication managers
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#H3159430">
+                  The steps used to create a publication
+                </a>
+              </li>
+              <li>
+                <a href="#H7757657">
+                  What you'll learn here
+                </a>
+              </li>
+              <li>
+                <a href="#H2087393">
+                  Pipeline features
+                </a>
+              </li>
+              <li>
+                <a href="#H4870876">
+                  System configurations and setting
+                </a>
+              </li>
+              <li>
+                <a href="#H4820656">
+                  Publication data structure
+                </a>
+              </li>
+              <li>
+                <a href="#H6425485">
+                  Digital sovereignty
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_2_0">
+              What You'll Need to Get Started
+            </a>
+            <ol>
+              <li>
+                <a href="#H8481455">
+                  Publication contributor
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H3214765">
+                      Account creation
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H8748576">
+                          Fidus Writer
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#H7576515">
+                  Publication manager
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H5792718">
+                      Account creation
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H8503334">
+                          Fidus Writer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H4652413">
+                          Git
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H3758785">
+                              GitLab account
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H2690045">
+                              GitHub account
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_3_0">
+              Four Step Process
+            </a>
+            <ol>
+              <li>
+                <a href="#_3_0">
+                  Step 1: Make a Publication Git Repository and Website
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H4018151">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H1473428">
+                      Step-by-step guide
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H2479402">
+                          Create a repo
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H9225084">
+                          Create a website
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4342812">
+                      Step 1 completion: What's next?
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#_3_1">
+                      Bibliography
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_4_0">
+                  Step 2: Create a Book Project in Fidus Writer
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H4535132">
+                      What's covered here
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H4439255">
+                      1. Create a 'personal' folder
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H8214025">
+                      2. Create placeholder documents
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H7006285">
+                          How to create documents
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H642923">
+                      3. Create a Fidus Writer book
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H8269040">
+                      4. Connecting your book to a Git repo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H6619707">
+                      Next steps
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_5_0">
+                  Step 3: Invite Your Team
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H3777938">
+                      1. Adding users as contacts
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H9350209">
+                      2. Giving users access to edit documents
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H6251349">
+                      3. Sharing your book for view only and preview download
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H5018454">
+                      Adding reviewer and editors to documents
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H7032777">
+                          Basic (contributors)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H2377842">
+                          Review
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4422568">
+                      Next steps
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_6_0">
+                  Step 4: Publish as Multi‑format!
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H6462932">
+                      Output formats we'll cover here
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H5954601">
+                      Preview outputs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H2238943">
+                      Applying layout design styles and Git export
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H9093471">
+                      Exporting PDF to Git
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H6290333">
+                      Multi-format publishing configurations
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H2167774">
+                          Recommended minimum default output
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H6991098">
+                          Creating print-on-demand publications
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H855085">
+                              Steps to enable Print-on-demand
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_7_0">
+              Configurations
+            </a>
+            <ol>
+              <li>
+                <a href="#_7_0">
+                  System Configurations and Settings
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H9202894">
+                      Introduction
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H3154410">
+                      Fidus Writer
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H1068085">
+                          General
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H1552973">
+                          1. Documents
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H2380763">
+                              Document view
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7829280">
+                              Document manager view
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H6665750">
+                      Books
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H7619734">
+                          Automatically generated parts of a book
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H3989750">
+                          Book setting and configurations
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H9336653">
+                          Images
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H6668129">
+                          References
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H7350400">
+                      Templates
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H8460509">
+                      User account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H4807452">
+                      Administration
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H5511626">
+                      Styles
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H6892689">
+                      Exporters
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H8001298">
+                      Contacts and sharing
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H3072165">
+                          How to share documents
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H3372306">
+                          How to share books
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H7934822">
+                      GitLab Community Edition (GitLab CE)
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_8_0">
+              Publication Info
+            </a>
+            <ol>
+              <li>
+                <a href="#_8_0">
+                  About the Guide
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H8229716">
+                      Description
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H5465299">
+                      Contributors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H2281570">
+                      Technical credits
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H2431584">
+                          Layout design style
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H3168740">
+                          Images
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H649993">
+                          Fonts
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H319315">
+                          Open source software
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="article-part article-title" id="_1_0">Welcome to the Publishing Pipeline!</div>
+    <div class="article-part article-richtext article-body">
+      <figure id="F98934631" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="none" data-caption-hidden="true"><img src="images/b3bc6ba5-db38-4ec8-89db-45c029fdb485.png"></figure>
+      <p>The quick start guide is for you to learn how use the 'publishing pipeline' for making multi-format publications: reports, manuals, books, and papers, etc.</p>
+      <p>The 'publishing pipeline' connects the word processor to publishing. What this mean for publication production is that from an online multi-user editor you can automatically create and typeset multi-format outputs – PDF, web, eBook, print-on-demand, and more – to file storage or live online. You can also make updates at any time across all format outputs from one single-source. </p>
+      <p>High quality layout designs are enables by combining pre-made templated 'layout design styles' with automate machine typesetting. This means that all the time-consuming layout design work is taken out of the production time-line and is done in advance, enabling a rapid publishing workflow.</p>
+      <p>The quick start guide is for contributors and publication managers. Technical administrator and developers, and typesetting layout designers, should see the 'Admin Guide'.</p>
+      <p>We'll be working with an online collaborative word processor and publishing to multi-format — PDF, web, e-book, mobile, print-on-demand, etc. — all using 'digital sovereign' open-source software and systems to ensure privacy and security, including: being self-hosted, GDPR compliance, and ecryption, and more.</p>
+      <h2 id="H4632171">What you'll need before you start</h2>
+      <figure id="F18710661" class="aligned-right image-width-25" data-aligned="right" data-width="25" data-category="none" data-caption-hidden="true"><img src="images/fec439eb-c4d6-4587-a4a2-affde7c45586.png"></figure>
+      <p>See instructions in the 'What You'll Need to Get Started' section of this guide for creating all the accounts needed.</p>
+      <h3 id="H5614484">For contributors</h3>
+      <p>Contributors will need the following.</p>
+      <ol id="L93292561">
+        <li>
+          <p>An email address to receive account emails.</p>
+        </li>
+        <li>
+          <p>A user account with the online word processors 'Fidus Writer'.</p>
+        </li>
+      </ol>
+      <h3 id="H9374516">For publication managers</h3>
+      <p>Publication managers will need the following.</p>
+      <ol id="L61781181">
+        <li>
+          <p>An email address to receive account emails.</p>
+        </li>
+        <li>
+          <p>A user account with the online word processor 'Fidus Writer'.</p>
+        </li>
+        <li>
+          <p>GitLab or/and GitHub accounts, depending on which supported Git platform your using.</p>
+        </li>
+        <li>
+          <p>Connect 'Fidus Writer' to your Git platform of choice.</p>
+        </li>
+      </ol>
+      <h2 id="H3159430">The steps used to create a publication</h2>
+      <ol id="L70094001">
+        <li>
+          <p>Create a Git repository and website</p>
+        </li>
+        <li>
+          <p>Create a book (collation of documents)</p>
+        </li>
+        <li>
+          <p>Invite the team</p>
+        </li>
+        <li>
+          <p>How to publish multi-format</p>
+        </li>
+      </ol>
+      <h2 id="H7757657">What you'll learn here</h2>
+      <ol id="L90418291">
+        <li>
+          <p>Account creation for Fidus Writer, GitLab including GitLab.com and GitLab CE, and GitHub.</p>
+        </li>
+        <li>
+          <p>How to prepare your public Git repository for storing your publication data, with an option to enable a website.</p>
+        </li>
+        <li>
+          <p>GitLab Pages and GitHub Pages website creation.</p>
+        </li>
+        <li>
+          <p>To setup your publication's online collaborative word processor.</p>
+        </li>
+        <li>
+          <p>Invite your team to collaborate on writing online.</p>
+        </li>
+        <li>
+          <p>How to publish.</p>
+        </li>
+      </ol>
+      <h2 id="H2087393">Pipeline features</h2>
+      <ul id="L58404751">
+        <li>
+          <p>Collaborative work space: invite designers, editors, proofers, or reviews to work on a publication.</p>
+        </li>
+        <li>
+          <p>Multi-format publication outputs: website, PDF, paginated web, eBook, and print-on-demand etc.</p>
+        </li>
+        <li>
+          <p>Automatic typesetting and layout design styles, so no time consuming typesetting.</p>
+        </li>
+        <li>
+          <p>Single-source publishing: Make an edit and distribute to all formats.</p>
+        </li>
+        <li>
+          <p>Citation manager.</p>
+        </li>
+        <li>
+          <p>Open-source software and 'pipeline architecture' designed for system integration.</p>
+        </li>
+        <li>
+          <p>Git storage with versioning.</p>
+        </li>
+        <li>
+          <p>Interoperable formats: JATS/XML, JSON, HTML, LaTeX, etc.</p>
+        </li>
+        <li>
+          <p>Semantic structuring and enrichment: Linked Open Data (Use of terminology services and TDM), publication level PID, publication internal structure and for digital objects.</p>
+        </li>
+      </ul>
+      <h2 id="H4870876">System configurations and setting</h2>
+      <p>To find out about Fidus Writer, Documents, and Book settings see the guide section 'System Configurations and Setting'.</p>
+      <h2 id="H4820656">Publication data structure</h2>
+      <figure id="F86281041" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="figure"><img src="images/65d2d40e-81bf-4867-ba23-b86a5869635d.svg">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">System data model</span></figcaption>
+      </figure>
+      <h2 id="H6425485">Digital sovereignty</h2>
+      <figure id="F43863211" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="none" data-caption-hidden="true"><img src="images/60a0cd01-c4e1-467e-a517-a5ae77dbbbaf.png"></figure>
+      <p>The term 'digital sovereignty' is used here to describe the steps taken to ensure privacy of personal information and the security of content. Privacy and security are vital because of the encroachment of digital activity by corporations and states, by parties with malicious intent, or through accidental data loss.</p>
+      <p>To ensure your 'digital sovereignty' we combine data security measures, adherance to privacy legislation such as European General Data Protection Regulation (GDPR), and readiness for privacy legislation of different juristications such as the California Consumer Privacy Act (CCPA), as well as transparency of code and data storage.</p>
+      <p>The system can be self-hosted, is open-source, has full GDPR compliance, uses two factor authentication for admin areas, and OAuth authenication for authentication and authorization infrastructure (AAI) integration. </p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_2_0">What You'll Need to Get Started</div>
+    <div class="article-part article-richtext article-body">
+      <p>Below are instructions for the steps you'll need to complete before starting work on a 'publishing pipeline' project.</p>
+      <p><strong>All users will need an email address that can receive emails with URL links that can be used for account verification on the web.</strong></p>
+      <p>The content below has been ordered by user types:</p>
+      <ul id="L52830541">
+        <li>
+          <p>Publication contributor</p>
+        </li>
+        <li>
+          <p>Publication manager</p>
+        </li>
+      </ul>
+      <p><strong>Account creation:</strong> The instructions below cover default account creation methods. If the listed platforms are using 'Single Sign On' features then authentication can also be made though organisation login credentials or platform accounts such GitLab, OAuth services, or using other authentication and authorization infrastructure (AAI)s</p>
+      <h2 id="H8481455">Publication contributor</h2>
+      <h3 id="H3214765">Account creation</h3>
+      <h4 id="H8748576">Fidus Writer</h4>
+      <p>Fidus Writer has three account creation processes and depending on the specific instance your using you will have different options:</p>
+      <ol id="L59062861">
+        <li>
+          <p>Invite only</p>
+        </li>
+        <li>
+          <p>Sign Up</p>
+        </li>
+        <li>
+          <p>Single Sign On authentication</p>
+        </li>
+      </ol>
+      <p><strong>Invite only:</strong> If there is no 'Sign Up' button on website then account creation is through invite only. Please contact the site managers and request an account. If you are approved for an account you will receive an email with instructions for completing the account creation process.</p>
+      <p><strong>Sign Up:</strong> Follow the account creation instructions on the website. Once you have filled in the detail you will receive an email to complete the sign up process.</p>
+      <p><em>Important note: You must verify your account my clicking on the email received in your email inbox and agreeing to the privacy policy to complete the account creation process. If this is not completed your account cannot be created.</em></p>
+      <p><strong>Single Sign On:</strong> Fidus Writer can be used with authentication credentials from other platforms that use the OAuth protocol. If you have an account with a authentication service listed on the Fidus Writer instance your using you will be able to login using that account, whether it is your workplace account or another platform account, for example using a GitLab account. </p>
+      <p>You will be able to see if other platform logins can be used as they will be listed on the Fidus Writer homepage. Below is an example site that uses GitHub and GitLab.</p>
+      <figure id="F93200321" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none"><img src="images/71699460-57ed-4235-9586-40bec33cc8f8.png">
+        <figcaption><span class="label"></span><span class="text">Available social accounts</span></figcaption>
+      </figure>
+      <h2 id="H7576515">Publication manager</h2>
+      <h3 id="H5792718">Account creation</h3>
+      <h4 id="H8503334">Fidus Writer</h4>
+      <p>See above.</p>
+      <h4 id="H4652413">Git</h4>
+      <p>Depending on what Git platform you are using in the 'publishing platform' you will need an account on each one. You may be using more than one Git platform and in that case you will need an account on each individual platform.</p>
+      <p>Currently: GitLab CE, GitLab.com, and GitHub.com are supported (2022).</p>
+      <h5 id="H3758785">GitLab account</h5>
+      <p>The same process is used for GitLab Community Edition (GitLab CE) or for GitLab.com.</p>
+      <p>Follow the instructions here <a href="https://gitlab.com/users/sign_up" title="https://gitlab.com/users/sign_up">https://gitlab.com/users/sign_up</a> </p>
+      <h5 id="H2690045">GitHub account</h5>
+      <p>Follow the instructions here <a href="https://github.com/signup" title="https://github.com/signup">https://github.com/signup</a></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="part">Four Step Process</h1>
+    <div class="article-part article-title" id="_3_0">Step&nbsp;1: Make a Publication Git Repository and Website</div>
+    <div class="article-part article-richtext article-body">
+      <p>The Git repository (repo) is the storage location of your outputted publication which is connected to the net. A website can also be made from the repo with a selected content being made public. When your repo is updated, so is your website.</p>
+      <figure id="F55869431" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="none"><img src="images/f8bbd94d-f20e-4bbe-b9d3-9b043bedfdb7.png">
+        <figcaption><span class="label"></span><span class="text">Example Git repository</span></figcaption>
+      </figure>
+      <figure id="F88093361" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="none"><img src="images/d7cbcac6-ef5e-484d-850a-d174a6888644.png">
+        <figcaption><span class="label"></span><span class="text">Example publication which is a presentation of the repository above</span></figcaption>
+      </figure>
+      <h2 id="H4018151">About</h2>
+      <p>The repository uses <a href="https://git-scm.com/" title="https://git-scm.com/">Git</a><a href="#fn1" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span></a> technology which allows for versioning of your publication. </p>
+      <p>We save to GitHub and GitLab <span class="citation">(Perkel&nbsp; 2016)</span>. GitLab can be used as <a href="GitLab.com" title="GitLab.com">GitLab.com</a> or as a self-hosted instance for public and private publications, or for staging publications for later transfer to another repo. We use GitLab Community Edition (GitLab CE) for self-hosting which is open-source software. GitHub is not open-source but is useful for publication distribution and visibility.</p>
+      <figure id="F22345641" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="none"><img src="images/26972b81-3aa5-42db-9da6-7ab6ab269dc3.jpg">
+        <figcaption><span class="label"></span><span class="text">Git logo</span></figcaption>
+      </figure>
+      <figure id="F44428261" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="none"><img src="images/db781e4a-0460-4824-8351-05102a800d4e.jpg">
+        <figcaption><span class="label"></span><span class="text">Octocat: GitHub's mascot</span></figcaption>
+      </figure>
+      <figure id="F88034391" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="none"><img src="images/6c70c3fd-31ab-446b-bfe3-5a7ee1e2f98f.png">
+        <figcaption><span class="label"></span><span class="text">GitLab logo</span></figcaption>
+      </figure>
+      <h2 id="H1473428">Step-by-step guide</h2>
+      <p>These instructions are for using GitHub. The principles are the same for GitLub.</p>
+      <p>These steps will allow you to create a repository to for your publication with the option for a website.</p>
+      <h3 id="H2479402">Create a repo</h3>
+      <p>Use a GitHub Template Repository (Repo)</p>
+      <p>You will create a prepopulated GitHub template repository for you publication. The template repo contains components for creating the website and providing links to the other publication formats in the website.</p>
+      <p>Navigate to the <a href="https://github.com/" title="https://github.com/">template repo</a> and click the green button 'Use this template'.</p>
+      <figure id="F25312281" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none"><img src="images/cf59aade-4378-43a9-a64e-76013b4147a0.png">
+        <figcaption><span class="label"></span><span class="text">Example template repository</span></figcaption>
+      </figure>
+      <p>Then choose <strong>where you will make the new repo</strong> and <strong>its name</strong>. Once chosen click 'Create repository from this template'.</p>
+      <figure id="F25227021" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none"><img src="images/2a593a12-e21b-478e-8943-f75fdc9dd278.png">
+        <figcaption><span class="label"></span><span class="text">Name your repo</span></figcaption>
+      </figure>
+      <p><strong>Where to save your repo?</strong> In GitHub you can save repos with organisations or in your personal account, select this under the field labeled 'Owner'.</p>
+      <p><strong>How to name your repo?</strong> The name of the repo will be its display name and URL address. It is good practice to adopt a naming convention style to be inline with other publications, this might be a short title, or even an acronym. Note it is good practice to use only lowercase in the name as the URL is case sensitive. Names can be changed at any time but it will change any associated URLs.</p>
+      <p>Note: Repo names can be changed at any time, but this will change the website URL to be the new name and you must remember to update the URL in other places where you have used the URL address.</p>
+      <p><strong>Other settings:</strong> You can give the repo a description; make the repo public is the default, and the click greed button.</p>
+      <ol id="L7141501">
+        <li>
+          <p></p>
+          <h3 id="H9225084">Create a website</h3>
+          <p>GitHub has a service called GitHub Pages. This creates free websites on the domain github.io or you can use your own custom domain. The default URL address pattern is https://organisation-name.github.io/publication-name/. The content from your repo will be available on the URL. </p>
+          <p>Note: Websites can be given custom domain names. You will need to consult GitHub documentation to enable this feature.</p>
+          <p>This is a two part process.</p>
+          <p><strong>Part 1:</strong></p>
+          <figure id="F72332451" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/cd4aad9d-5d95-4ecd-944d-f1f6ce8e75f3.png"></figure>
+          <p>Navigate to 'Settings' in the top horizontal options. In settings on the left menu select 'Pages'. In the dialog in the main page use the following settings: Select branch - main; select folder - root, and; click save. This will complete the site creation and give you a URL for your website. Copy the URL and you can then use it to add address to front end of the repo.</p>
+          <figure id="F78400191" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/d941d969-3938-4dec-aa57-a45debb46e84.png"></figure>
+          <p>To paste the site name into the front end of your repo first go to the front end of the repo by clicking &lt;code&gt;. To the right click the cog next to About and in here you can paste in the URL and save.</p>
+          <figure id="F80239021" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/7b251363-3e8f-4da0-9185-bb245e4aaa97.png"></figure>
+          <p>You will now have a website and the address appears top right.</p>
+          <figure id="F8612631" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/8a364c1f-1553-4b44-9974-77307c345b2e.png"></figure>
+          <p>Your website will look like this. Currently the site will contain benchmark content to demonstate that layout features are working correctly. This content will be removed once you output your publication.</p>
+          <figure id="F85415421" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/a0b7b868-c526-485f-8f20-c2460cb693ac.png"></figure>
+          <p><strong>Part 2:</strong></p>
+          <p>To enable the Paginated Web version of your publication the repo address needs to be added to the setup.json file in the top level of your repo.</p>
+          <figure id="F23728731" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/fde2c425-6646-447e-94ee-d0d93459de8a.png"></figure>
+          <p>Edit the file setup.json and add in the organisation name and repo name into line 3 and save at the bottom of the page. "repoURL": "https://github.com/organisation-name/publication-name/".</p>
+          <figure id="F41371831" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/a4d479fd-2aea-4114-8740-571c5d952b93.png"></figure>
+          <figure id="F50720561" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="none" data-caption-hidden="true"><img src="images/693958a1-b909-4dfd-ac6a-0ede6a0c344b.png"></figure>
+        </li>
+      </ol>
+      <h2 id="H4342812">Step 1 completion: What's next?</h2>
+      <p>Now that you have your repo and website setup, next you will set-up a book project in Fidus Writer and connect it to your Git repo, this will allow you to output book files from Fidus Writer to Git.</p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn1" role="doc-footnote" data-chapter-counter="1" data-book-counter="1">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span>Git is open-source software that both <a href="https://github.com/" title="https://github.com/">GitHub</a> and <a href="https://about.gitlab.com/" title="https://about.gitlab.com/">GitLab</a> are built on – think of it as a 'time machine for code' and all that could do.</p>
+      </section>
+    </section>
+    <h1 class="article-bibliography-header" id="_3_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Perkel&nbsp;, Jeffrey . 2016. “Democratic Databases: Science on GitHub.” <i>Nature</i>, 2016. https://www.nature.com/articles/538127a.</div>
+    </div>
+    <div class="article-part article-title" id="_4_0">Step 2: Create a Book Project in Fidus Writer</div>
+    <div class="article-part article-richtext article-body">
+      <p>The book project in Fidus Writer will act as an empty container for your publication, later on you can change all the file names and book information to reflect your books title and content. You can also add and remove documents at any time.</p>
+      <h2 id="H4535132">What's covered here</h2>
+      <ol id="L84796311">
+        <li>
+          <p>Create a 'personal' folder (only you see this - it is not shared) for your book documents</p>
+        </li>
+        <li>
+          <p>Create placeholder documents for your book parts</p>
+        </li>
+        <li>
+          <p>Create a Fidus Writer book - a collation of book documents, make divisions into book parts </p>
+        </li>
+        <li>
+          <p>Connecting your book to a Git repo </p>
+        </li>
+      </ol>
+      <p>In a later step sharing the book with your team will be covered.</p>
+      <p>Full book configuration details can be found in </p>
+      <h2 id="H4439255">1. Create a 'personal' folder</h2>
+      <p>Here you will create a folder and after this create your documents in the folder. To start with you need to be in the Documents area of the website. </p>
+      <p>At the top of the page in the secondary menu click on 'Create New Folder'.</p>
+      <p>PIC</p>
+      <p>Give the folder a name</p>
+      <p>PIC</p>
+      <p>Now you will have an empty folder. If no documents are made in the folder and it is left empty the folder will not be saved.</p>
+      <h2 id="H8214025">2. Create placeholder documents </h2>
+      <p>These are the placeholder document examples you will make:</p>
+      <ul id="L53525721">
+        <li>
+          <p>Front Matter: Where you will add imprint, contributor information, acknowledgements, etc.</p>
+        </li>
+        <li>
+          <p>Section 1: A top level part of a book as section or chapter</p>
+        </li>
+        <li>
+          <p>Section 2</p>
+        </li>
+        <li>
+          <p>Section 3</p>
+        </li>
+        <li>
+          <p>Back Matter: This can contain appendices, glossaries, abbreviations, etc.</p>
+        </li>
+      </ul>
+      <h3 id="H7006285">How to create documents</h3>
+      <p>Navigate to 'Documents' area of the website. In the sub-menu below documents select 'Create new document' and choose 'Book Default' document template. If you are working on a special book or publication series you might use a different document template.</p>
+      <p>Here you will add three documents as placeholders. These are added so you can configure your book basics, names and documents can be changed or deleted later. Make three documents with these name: Front Matter; Section 1, and; Back Matter.</p>
+      <p>&lt;add screen shots for document creation: 1. Add, 2. select doc template, 3. document title and document name, 4 Close document, document settings&gt;</p>
+      <figure id="F35194901" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/9e5d1d14-244e-4d55-b1f9-effb37b619e9.png">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="1">Figure</span><span class="text">Adding documents to be used in your book</span></figcaption>
+      </figure>
+      <p></p>
+      <p></p>
+      <figure id="F72135581" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/2be7082d-cf81-4659-be99-15f41a555f0a.png">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="2">Figure</span><span class="text">Edit document and add a title</span></figcaption>
+      </figure>
+      <h2 id="H642923">3. Create a Fidus Writer book</h2>
+      <p>A Fidus Writer Book collects together a series of Fidus Writer documents. Here we will create a book and add your docs, as well as carry our some basic configurations of the book.</p>
+      <p>Navigate to the Book section of the website.</p>
+      <p>PIC</p>
+      <p>Click 'Create new book'. You will be show a book dialogue box with a number of tabs: Basic information, Sections, Bibliography, Epub, Drucken / PDF, Validation, and Git repo.</p>
+      <figure id="F63655341" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure" data-caption-hidden="true"><img src="images/8a7e23ca-ece1-4c13-8192-e6b2ff7e5fc0.png">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="3">Figure</span></figcaption>
+      </figure>
+      <p>To start with you will only complete a few settings, you can return later to complete all of the book setup. Here we will fill out the title and add your documents.</p>
+      <p>Add title.</p>
+      <p>To add your documents move to the 'Sections' tab. Here you will see your Documents listed on the left, at the top your newly created 'folder'. Click the folder to display its contents. You can add your documents to the book by selecting them and clicking on the arrow in the middle to add them to the right column. Now save your book. The dialogue box will now close and you will see your book listed in the book section of the site.</p>
+      <p>You can return later to complete all the book settings.</p>
+      <p>PIC</p>
+      <h2 id="H8269040">4. Connecting your book to a Git repo</h2>
+      <p>This part of the process only needs to be carried out by publication managers or users who will be outputting to Git. If the Git repo is public then any user will be able to see the saved content without any login credentials.</p>
+      <p>You need to have created your Git repo which is covered in Step 1., this will repo will be where you save your book too.</p>
+      <p>First we will connect Fidus Writer with the Git instance you are using, this is done by authorising Git to connect with Fidus Writer using you user accounts on both systems.</p>
+      <p>1. Make sure you are logged into Git and Fidus Writer.</p>
+      <p>2. From the Fidus Writer homepage navigate to your user profile at the top right and click on your user name, this will take you to your user profile page where you can connect with your Git instance in the 'social accounts area'.</p>
+      <p>3. Click Connect next to the Git instance you want to connect to.</p>
+      <p>PIC</p>
+      <p>4. You will now be redirected to the Git website, you will need to login if you haven't already done so.</p>
+      <p>PIC</p>
+      <p>5. Then accept the Authorisation. This process connects your user accounts and allows the two systems to transfer your publication files.</p>
+      <p>PIC</p>
+      <p>The connection process is now complete and we will now select the repo for your book.</p>
+      <p>6. Navigate to your book and click on it to open the book dialogue box. Clikc on the Gitrepository tab on the right.</p>
+      <p>PIC</p>
+      <p>7. Click 'Refesh' on the right to get your list of repos from Git. The repos will now be availabel in the drop down menu.</p>
+      <p>PIC</p>
+      <p>8. Select your repo from the list, then below all the output types should be checked, and click save.</p>
+      <p>9. You can now export your book to Git. You will see your book listed in the Book site area. Select the checkbox for your book and in the menu above the checkbox to the left select 'Export to Git Repository'. A dialogue will appear asking for a Commit message, this is a note for this revision export.</p>
+      <p>PIC</p>
+      <p>A message dialogue will appear bottom right. When the message 'Your Book has been sucessfully save to Git' appears the process has finished. </p>
+      <p>PIC</p>
+      <p>You can now navigate to Git and you will see your files on Git. That is the end of this process.</p>
+      <p>PIC</p>
+      <h2 id="H6619707">Next steps</h2>
+      <p>You can now invite your team to access the publication on Fidus Writer.</p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_5_0">Step 3: Invite Your Team</div>
+    <div class="article-part article-richtext article-body">
+      <p><strong>This section is intended for </strong><em><strong>publication managers</strong></em><strong>.</strong></p>
+      <p>You can invite contributors to your publication project and give them access to project documents and book.</p>
+      <p><strong>Note:</strong> This setup is so that contributors can edit documents and preview the book publication as PDF, e-book, etc., without being able to export the publication to Git, or change other configurations of a book, such as: change the order of sections (chapters), or edit other book information and settings.</p>
+      <p>If your team does not yet have accounts yet then see the guide section 'What You'll Need to Get Started' to add them as users to the system.</p>
+      <p>For contributors access to a publication is a <strong>three part process</strong>:</p>
+      <ol id="L76287551">
+        <li>
+          <p>First, the user has to <strong>accept being a contact of yours</strong>.</p>
+        </li>
+        <li>
+          <p>Second, you grant <strong>document editing access</strong>, and </p>
+        </li>
+        <li>
+          <p>Third, you give <strong>view-only access to the book</strong> so that users can download previews. </p>
+        </li>
+      </ol>
+      <p>Team members can also be given access for different roles, for example as reviewers or editors:</p>
+      <ol id="L84844161">
+        <li>
+          <p><strong>Reviewer</strong> with commenting only on documents, and; </p>
+        </li>
+        <li>
+          <p><strong>Editor</strong> with track changes only permissions on documents.</p>
+        </li>
+      </ol>
+      <p>Settings for these roles are described at the end of the section.</p>
+      <h2 id="H3777938">1. Adding users as contacts</h2>
+      <p>Each user in Fidus Writer has contacts. First a user has to be a contact before they can be invited and given access to your documents or books.</p>
+      <p>In the homepage of Fidus Writer navigate to your user icon top right and from the drop-down menu select Contacts.</p>
+      <figure id="F81878771" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/391bdb8e-5974-4212-b315-9847119c3c0e.png">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Photo</span><span class="text">Add contacts - top right</span></figcaption>
+      </figure>
+      <p>You will see an empty page if you have no contacts yet or otherwise a list of contacts.</p>
+      <figure id="F5073131" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/e5be03dd-8e38-448d-b6dd-fce0412588c5.png">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="2">Photo</span><span class="text">Invite contact - top left. List of contacts</span></figcaption>
+      </figure>
+      <p>Click <strong>Invite contact</strong> top left, you can add contacts here by username or email address. Each contact added will be notified about your contact request and will need to approve the request. </p>
+      <p>If the person does not yet have a Fidus Writer account you will need to use their email address, and then they will be invited to create an account.</p>
+      <figure id="F73625321" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/50f9c291-37a8-413e-b800-f17a3b6c680d.png">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="3">Photo</span><span class="text">Invite user dialogue box. Add email address or user name to invite user</span></figcaption>
+      </figure>
+      <p>The user will get a notice in Fidus Writer and as email about the contact request, and then they need to accept the request. If the user is logged in to Fidus Writer the notice will come up as a pop-up request for them to click through to contacts. Also, they can always visit their contact areas to check on your request.</p>
+      <p>You can see the status of your invite for a contact in your contacts view area. The status of an invite is notes as <strong>User</strong> if the invite has been accepted.</p>
+      <figure id="F98742551" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/c21f0041-95d0-4128-abe9-970886b5b0db.png">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="4">Photo</span><span class="text">The status of an invite is notes as User if the invite has been accepted</span></figcaption>
+      </figure>
+      <p>If you have problem adding contact then get in touch with administration support, and they can help check on the status of invites. All personal information is used in strict adherence to GDPR and principles of Digital Sovereignty where users always have to grant explicit access to their personal data.</p>
+      <h2 id="H9350209">2. Giving users access to edit documents</h2>
+      <p><strong>Note:</strong> As creator of documents you become the document owner. There can only be one document owner. Only the owner of a document can edit the sharing settings. Users that you invite will be able to <strong>edit all parts of a document including deleting documents</strong> as we are giving the Write access to documents. You can also set their access to being: Write tracked (track changes); Comment, or; Read (read only).</p>
+      <p>Navigate to the Fidus Writer home and the documents area and from there into the directory you made in the earlier step in the guide. Here you will see a list of your publication documents.</p>
+      <figure id="F94960221" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/ecfbd0c0-16ae-4aa4-94bc-e993d00c5c66.png">
+        <figcaption><span class="label-counter" data-book-counter="5" data-chapter-counter="5">Photo</span><span class="text">Publication documents</span></figcaption>
+      </figure>
+      <p>In the directory select the top checkboxes above all the document checkboxes this will turn on and off (toggle) the selection of all the documents, then click the drop-down arrow icon and select 'Share' from the drop-menu.</p>
+      <figure id="F83659771" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/c0ffcd80-a1bb-4767-9f01-e4f6403be9db.png">
+        <figcaption><span class="label-counter" data-book-counter="6" data-chapter-counter="6">Photo</span><span class="text">Select all docs by checking checkbox above documents. Note sharing drop-down is from down arrow to the right of the checkbox</span></figcaption>
+      </figure>
+      <p>You will now see the share dialogue box. Add users by moving them from the left to the right column and edit icon next to each user and change it from the view (eye icon) to edit (pencil icon) to give them full edit access, otherwise they will only be able to view documents. And then save your sharing settings. </p>
+      <figure id="F25716331" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/2b3de32d-4d3e-4e7c-9161-6d7d37b1c232.png">
+        <figcaption><span class="label-counter" data-book-counter="7" data-chapter-counter="7">Photo</span><span class="text">Select Share menu item from Drop-down document menu</span></figcaption>
+      </figure>
+      <p>The sharing task for documents is now complete.</p>
+      <p><strong>If you add a new user or new document - then repeat parts 1. and 2. to enable sharing.</strong></p>
+      <h2 id="H6251349">3. Sharing your book for view only and preview download</h2>
+      <p>You want your contributors to be able to view the book settings and preview the complete book in its different typeset layout formats, but prevent them from publishing the book or directly rearranging book sections or selecting a new layout typesetting style, etc.</p>
+      <p>In this part we will share the book with the same users as before in documents, but with the <strong>permissions as view only</strong>.</p>
+      <p>1. Navigate to the book site area of Fidus Writer and locate your book.</p>
+      <figure id="F66888411" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/a0f1beec-79fa-4ed4-bc58-9c22e9536863.png">
+        <figcaption><span class="label-counter" data-book-counter="8" data-chapter-counter="8">Photo</span><span class="text">Book site area</span></figcaption>
+      </figure>
+      <p>2. To the right of your book click the pencil icon. This will bring up the sharing dialogue box. As before with sharing documents move the users from the left column to the right column to share the document with them. The difference this time is that we're going to leave the users as <strong>view only (eye icon)</strong>.</p>
+      <p>Once you have completed this part the sharing setup in total is now completed.</p>
+      <figure id="F29566181" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/b41a1892-6720-486f-8b11-e06d46aa69ec.png">
+        <figcaption><span class="label-counter" data-book-counter="9" data-chapter-counter="9">Photo</span><span class="text">Share your publication. Edit pencil icon to right of book, then in book dialogue box more users to right column and set to edit (pencil icon)</span></figcaption>
+      </figure>
+      <hr>
+      <h2 id="H5018454">Adding reviewer and editors to documents</h2>
+      <p>For documents, you have the option to set a users access rights as view only, comment only, or as track changes only.</p>
+      <p>These setting are useful for reviewers and editors.</p>
+      <figure id="F15312041" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/c9b1abcb-0015-4636-b6e0-d679a5618852.png">
+        <figcaption><span class="label-counter" data-book-counter="10" data-chapter-counter="10">Photo</span><span class="text">Document sharing options for contributors and reviewers (Basic: write, write tracked, comments, read. Review: no comments, review, review tracked.)</span></figcaption>
+      </figure>
+      <h3 id="H7032777">Basic (contributors)</h3>
+      <ul id="L84987571">
+        <li>
+          <p>Write</p>
+        </li>
+        <li>
+          <p>Write tracked</p>
+        </li>
+        <li>
+          <p>Comment</p>
+        </li>
+        <li>
+          <p>Read</p>
+          <h3 id="H2377842">Review</h3>
+        </li>
+        <li>
+          <p>No comments</p>
+        </li>
+        <li>
+          <p>Review</p>
+        </li>
+        <li>
+          <p>Review tracked</p>
+        </li>
+      </ul>
+      <h2 id="H4422568">Next steps</h2>
+      <p>Next we will look at outputting your publication to Git. This will be the fourth and final step in this guide for your publication workflow.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_6_0">Step 4: Publish as Multi‑format!</div>
+    <div class="article-part article-richtext article-body">
+      <p>What is covered in the quick start guide for multi-format publishing.</p>
+      <p>For users of the system you will only need to select your layout design style from the available library of style and click output.</p>
+      <ol id="L18901111">
+        <li>
+          <p>First the system can create many outputs from one source as 'Publication Ready Outputs' (PROs)<a href="#fn2" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="2"></span></a>, as well as output additional interoperable and machine readable formats. </p>
+        </li>
+        <li>
+          <p>The system can apply pre-made reusable templates of <strong>'layout design styles'</strong> with automate machine typesetting.</p>
+        </li>
+        <li>
+          <p>Save out styled output formats to Git at the push of a button, or preview the outputs direct from the system. Note the PDF format needs to be saved locally and then uploaded to Git (this will be automated in the near future, Sept 2022).</p>
+        </li>
+      </ol>
+      <h2 id="H6462932">Output formats we'll cover here</h2>
+      <p>Other format outputs are listed in the System Configurations and Settings section.</p>
+      <ul id="L2914671">
+        <li>
+          <p>Website</p>
+        </li>
+        <li>
+          <p>Paginated Web</p>
+        </li>
+        <li>
+          <p>PDF</p>
+        </li>
+        <li>
+          <p>Print-on-demand (PDF)</p>
+        </li>
+        <li>
+          <p>e-Book</p>
+        </li>
+      </ul>
+      <table id="T34310601" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="table">
+        <caption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Table</span><span class="text">Starter output formats. More formats are available but to start with we'll cover the set below.</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p><strong>Formats &gt;&gt;&gt;</strong></p>
+            </th>
+            <th>
+              <p>Website</p>
+            </th>
+            <th>
+              <p>Paginated Web</p>
+            </th>
+            <th>
+              <p>PDF</p>
+            </th>
+            <th>
+              <p>Print-on-Demand (PDF)</p>
+            </th>
+            <th>
+              <p>e-Book</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Examples</strong></p>
+            </td>
+            <td>
+              <p>Template (to be provided) LINK</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Features</strong></p>
+            </td>
+            <td>
+              <p>Mobile first responsive</p>
+            </td>
+            <td>
+              <p>Fixed page</p>
+            </td>
+            <td>
+              <p>Screen PDF (symmetrical margins)</p>
+            </td>
+            <td>
+              <p>Print from one copy at a time. (recto - verso margins)</p>
+            </td>
+            <td>
+              <p>Use on e-Readers and distribute through book trade.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Running header / footer</strong></p>
+            </td>
+            <td>
+              <p>Place in left menu</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p>n /a</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Date (custom formats)</strong></p>
+            </td>
+            <td>
+              <p>Place in left menu</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p>Inline</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Version (From Fidus book version No.)</strong></p>
+            </td>
+            <td>
+              <p>Place in left menu</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p>yes</p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p>Inline</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Comments</strong></p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Fidus exports used to make output formats.</strong> </p>
+            </td>
+            <td>
+              <p>UHTML<a href="#fn3" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="3"></span></a></p>
+            </td>
+            <td>
+              <p>UHTML</p>
+            </td>
+            <td>
+              <p>PDF</p>
+            </td>
+            <td>
+              <p>PDF + Cover PDF (made seperately)<a href="#fn4" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="4"></span></a></p>
+            </td>
+            <td>
+              <p>EPUB</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="H5954601">Preview outputs</h2>
+      <p>You can download any of your outputs locally from the book dialogues window.</p>
+      <p>See notes on PDF export below.</p>
+      <p>PIC </p>
+      <h2 id="H2238943">Applying layout design styles and Git export</h2>
+      <p>1. Navigate to the book area of the site and here click on your book to open its dialog box.</p>
+      <p>PIC book area</p>
+      <p>PIC book dialogue</p>
+      <p>2. Choose your book <strong>'layout design style'. </strong>From the 'Print / PDF' tab you need to choosen your book style. As an example your can use 'Report 001' for an DIN A4 orientated layout style. Choosing a style will typeset all your outputs and you can change style at any time, or add and modify styles.</p>
+      <p>For your e-book you will need to add cover artwork in the Epub tab of your book information. You can upload a image file here. The artwork can be from the cover of your PDF or from any other source. Use a JPEG file at a size of 2560 px x 1600 px or close to this. E-book platforms request different sizes, here we have used Amazon Kindle sizes as of January 2022.</p>
+      <p>2. In the book dialogue box select the tab on the right Git repository.</p>
+      <p>3. In the Git repository tab slect the following: the reposity you want to save to (this will already be selected if you used the earlier guide setup); the output formats you want to use, and then from the export button bottom right select 'Export to Git repository'.</p>
+      <p>PIC Git settings - hightlight 3 options from above</p>
+      <p>PIC Export to Git repository - selection</p>
+      <p>4. A Git dialogue will now appear called 'Commit message'. This is a note about the export you will make to Git and it will appear in the file listing for this git export. The pupose of the note is to inform other team members or Git users about your export, for example what kind of updates were made. A Commit message should be informative and you can pick your own style, noting these may be public if the Gitrepo is public. </p>
+      <p>Click save and the export will start. The system will give you updates on the progress bottom right.</p>
+      <p>PIC Git export dialogue 'Commit message'</p>
+      <p>PIC Progress messages.</p>
+      <p>4. You can now save your book settings in the book dialogue box.</p>
+      <p>PIC book dialogue box.</p>
+      <p>5. Your export is now complete and your publication will now be on Git.</p>
+      <p>PIC Git - formats</p>
+      <p>PIC website </p>
+      <p>From the Git export you can either have the Git content be public or private. Additionally you can manually or automatically have content distributed to other storage locations or systems.</p>
+      <h2 id="H9093471">Exporting PDF to Git</h2>
+      <p>PDF outputs need to be saved locally and then uploaded to Git. </p>
+      <p>Here we will create our local PDF from the browser, save it locally and then log onto Git in the browser and upload the PDF.</p>
+      <p>1. In the book dialogue box select select print/pdf export.</p>
+      <p>PIC export as PDF button.</p>
+      <p>2. Now we will have your browser Print / PDF export dialogue box appear and there are some settings that need to be checked before we save the PDF file to your computer. </p>
+      <p>a. Set output as PDF.</p>
+      <p>b. Set margin to none.</p>
+      <p>c. have include background graphics checked as on.</p>
+      <p>Now click save and name the PDF 'book.pdf'. It is important to use this naming as Git then recognises the PDF and adds it to the website it makes with Git Pages. Save the file locally.</p>
+      <p>PIC PDF output box</p>
+      <p>3. Now upload the file to Git. Navigate to your repo in your browser, log into Git.</p>
+      <p>PIC upload to Git</p>
+      <p>Now you are at your repo's top level view you can upload the book.pdf file. Click add file top right, select your book.pdf file, add a 'commite message', and click upload. Your book.pdf file need to be in the top level of your repo. See the screenshot below.</p>
+      <p>The process is now complete and shortly the the PDF will appear in your website top menu.</p>
+      <p>PIC website PDF menu.</p>
+      <h2 id="H6290333">Multi-format publishing configurations</h2>
+      <p>You can output as wide variety of Publication Ready Output formats as well as interoperable formats for a number of different uses, as well as the main source files from Fidus Writer as JSON files.</p>
+      <p>To read more about other formats and advanced settings see the System Configurations and Settings guide section.</p>
+      <h3 id="H2167774">Recommended minimum default output</h3>
+      <p>Outputting a website, paginated web version, and PDF will be enough for readers. For this setting choose: UHTML, PDF as output types and you will have all you need for these outputs.</p>
+      <h3 id="H6991098">Creating print-on-demand publications</h3>
+      <p>The full process for print-on-demand (PoD) outputs is outside of the scope of this guide, but here is an outline of the steps involved.</p>
+      <p>As an introduction to PoD this is a print process where you can deposit your book with a printer who will make the book available to customers worldwide on the web via book retail websites and when the customer orders a book it is printed as an individual copy locally and shipped to them. As the publisher you do not have to pay for the printing or shipping, insteads this is deducted form the customer payment. As the publisher you are compensated for the sale, minus the book costs. You can also make your own bulk orders as the wholesale print cost.</p>
+      <p>PoD can also be used for private publication only used internally too.</p>
+      <p>You will need an ISBN number to distribute the publication. You do not need an ISBN if you use PoD for private orders with books you do not publically distribute.</p>
+      <h4 id="H855085">Steps to enable Print-on-demand</h4>
+      <ul id="L2905501">
+        <li>
+          <p>Create an account with a PoD provider like Ingram Lightning Source for professional PoD or Ingram Spark for one-off self publishing.</p>
+        </li>
+        <li>
+          <p>Make a book cover and upload your bookblock made in the PoD system.</p>
+        </li>
+        <li>
+          <p>Set the sales price. The price can allow a surplus, or be set to break even, or even be subsidised. </p>
+        </li>
+        <li>
+          <p>Publish. Your book will then go live on many retailers and you are compensated for sales monthly. </p>
+        </li>
+      </ul>
+      <p></p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn2" role="doc-footnote" data-chapter-counter="1" data-book-counter="2">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="2"></span>A Publication Ready Output (PRO) means that the format is ready for professional publishing, including typesetting, metadata, and other formatting and settings. Many systems can save files in a format, for example as HTML, or PDF - but it does not mean it can be used professionally. Microsoft Word can save as HTML or PDF but it doesn't make the formatted files into finished publications ready for distribution.</p>
+      </section>
+      <section id="fn3" role="doc-footnote" data-chapter-counter="2" data-book-counter="3">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="3"></span>UHTML - This stands for unified HTML. The Fidus exporter concatonates all the Document HTML files into one single HTML file.</p>
+      </section>
+      <section id="fn4" role="doc-footnote" data-chapter-counter="3" data-book-counter="4">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="4"></span>Cover PDF. Covers for print-on-demand (PoD) need to be be made seperately at present due to different requirements made by PoD printers.</p>
+      </section>
+    </section>
+    <h1 class="part">Configurations</h1>
+    <div class="article-part article-title" id="_7_0">System Configurations and Settings</div>
+    <div class="article-part article-contributors article-authors"><span class="contributor" data-firstname="Simon" data-lastname="Worthington" data-email="mrchristian001@gmail.com" data-institution="The Web">Simon Worthington <i>E-Mailadresse: mrchristian001@gmail.com</i> (The Web)</span></div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum ante, tempor sagittis nunc. Etiam felis nulla, consectetur a tempor quis, luctus vel massa. Vestibulum pharetra ultricies urna at consequat. Donec volutpat enim sed lectus venenatis aliquet non ut lectus. Vivamus at orci eget arcu tempor pretium ut id.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <h2 id="H9202894">Introduction</h2>
+      <p>Listed here are key features of system parts with accompanying descriptions.</p>
+      <blockquote>
+        <p>Block quote example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum eros placerat vehicula luctus. Nulla mattis congue gravida. Aenean pulvinar, neque et tincidunt pellentesque, sapien augue sodales ipsum, eget tempor.</p>
+      </blockquote>
+      <h2 id="H3154410">Fidus Writer</h2>
+      <p><a href="https://www.fiduswriter.org/" title="https://www.fiduswriter.org/">Fidus Writer</a> is the collaborative editor and publishing system. Fidus Writer is licensed under the open source AGPL v.3 license. The sourcecode is available here:&nbsp;<a href="http://github.com/fiduswriter">github.com/fiduswriter</a>.</p>
+      <p>Fidus Writer functionality can be extended with plugins.</p>
+      <p>Fidus Writer has eight main areas:</p>
+      <ol id="L88148891">
+        <li>
+          <p>Documents</p>
+        </li>
+        <li>
+          <p>Bibliography</p>
+        </li>
+        <li>
+          <p>Images</p>
+        </li>
+        <li>
+          <p>Templates</p>
+        </li>
+        <li>
+          <p>Books</p>
+        </li>
+        <li>
+          <p>User account</p>
+        </li>
+        <li>
+          <p>Administration</p>
+        </li>
+        <li>
+          <p>Styles - documents and books</p>
+        </li>
+        <li>
+          <p>Exporters</p>
+        </li>
+      </ol>
+      <h3 id="H1068085">General </h3>
+      <p>PIC logged out - support, lang</p>
+      <p>Message Support - look for the speech bubble icon top right, or bottom right.</p>
+      <p>Interface language - this is set when you first use Fidus Writer and can be changed with the drop down, bottom right.</p>
+      <p>Software version number - use browser view sourcecode to read software version number. See line 10: e.g., &lt;meta name="version" content="3.10.26"&gt;.</p>
+      <p>Keyboard shortcuts - Shift+CTRL+/</p>
+      <h3 id="H1552973">1. Documents</h3>
+      <h4 id="H2380763">Document view</h4>
+      <p>PIC Docs</p>
+      <p>Document saving - document are saved automatically in real-time, what you see on the screen will be saved. There is no need to use a save command.</p>
+      <p>Collaborative editing priority - Fidus Writer can be set with different priorities for which users edits or main server edit queue takes priority. The default setting is that the server takes priority, meaning it is the order in which edits arrive that takes priority rather than a designated user.</p>
+      <p>Collaborative editor visibily - if anther user is live on a document you will see their avatars top right.</p>
+      <p>Chat messaging collaborative editors - if users are live on a document you can use the chat function, bottom right. Messaging is only live when users are active. Chat is not saved and is not asynchronous.</p>
+      <p>Comments - select text and a comment icon will appear right. Click to add comment.</p>
+      <p>Spelling and grammar checking - see the <strong>Tools</strong> menu. Red indicated spelling, Blue grammar. Right click items to see suggested changes. Close spellcheck with <strong>Tools &gt; Spell/grammar check &gt; Remove marks</strong>. The function uses the open source software LanguageTool open source - <a href="https://languagetool.org/" title="https://languagetool.org/">https://languagetool.org/</a> </p>
+      <p>Using Fidus Writer offline - TBC</p>
+      <p>Document settings - Optional sections; Citation style; Document style; Text language; Paper size, Copyright information.</p>
+      <p>Inserting Ciations - see the book icon in the toolbar. Citations can be added manually or imported from online databases, e.g., Europe PubMed Central.</p>
+      <p>Document name and document title - these are two different entities that can be linked. To start with the document title that is written into the document creates the document name. But if you want to have a different document name you need to edit the field as it appear above the document when in docuemnt editing view. Both of these parts are only edited in the document edit view.</p>
+      <p>PIC document name, document title</p>
+      <h4 id="H7829280">Document manager view</h4>
+      <p>PIC doc manager</p>
+      <p>Create a document - choose a document template from the menu. A document template determines the structure of the document. Once a document template is set it cannot be changed.</p>
+      <p>Upload a Fidus Writer document - this is used primarily for uploading document revisions.</p>
+      <p>Search</p>
+      <p>Sort documents</p>
+      <p>Document selector and actions - select one or all docs with top selector. Share, copy, export, etc. </p>
+      <p>Open documents</p>
+      <p>Access document revisions</p>
+      <p>Share documents</p>
+      <h2 id="H6665750">Books</h2>
+      <h3 id="H7619734">Automatically generated parts of a book</h3>
+      <p>Some parts of the book are generated automatically and cannot be edited directly and may depend on book settings, document templates, book styles, or specific format output filters. </p>
+      <p>These parts are listed here.</p>
+      <ul id="L20024571">
+        <li>
+          <p>Covers</p>
+        </li>
+        <li>
+          <p>Table of Contents</p>
+        </li>
+        <li>
+          <p>Page numbering</p>
+        </li>
+        <li>
+          <p>Page headers and footers</p>
+        </li>
+        <li>
+          <p>References and footnotes: Placement as page notes or end notes, citation style</p>
+        </li>
+        <li>
+          <p>List of figures and tables</p>
+        </li>
+        <li>
+          <p>Section title pages</p>
+        </li>
+        <li>
+          <p>Placement of blank pages. e.g., before section titles.</p>
+        </li>
+        <li>
+          <p>Title page, and other front matter content divisions and styles</p>
+        </li>
+      </ul>
+      <h3 id="H3989750">Book setting and configurations</h3>
+      <ul id="L37192371">
+        <li>
+          <p>Basic book information</p>
+        </li>
+        <li>
+          <p>Book sections</p>
+        </li>
+        <li>
+          <p>Bibliographic citation style</p>
+        </li>
+        <li>
+          <p>EPUB covers</p>
+        </li>
+        <li>
+          <p>Printing / PDF - this is where the book layout style is set, as well as page size.</p>
+        </li>
+        <li>
+          <p>Validator - this check through documents for comments and track changes</p>
+        </li>
+        <li>
+          <p>Git - this is reserved for Publication Managers </p>
+        </li>
+      </ul>
+      <h3 id="H9336653">Images</h3>
+      <p>Create categories - categories are useful for organising your images used in a publication, publication series, or withing a team or department.</p>
+      <p>Upload images - JPG, PNG, and SVG images can be uploaded.</p>
+      <h3 id="H6668129">References</h3>
+      <p></p>
+      <h2 id="H7350400">Templates</h2>
+      <p></p>
+      <h2 id="H8460509">User account</h2>
+      <p></p>
+      <h2 id="H4807452">Administration</h2>
+      <p></p>
+      <h2 id="H5511626">Styles</h2>
+      <p></p>
+      <h2 id="H6892689">Exporters</h2>
+      <p></p>
+      <h2 id="H8001298">Contacts and sharing</h2>
+      <h3 id="H3072165">How to share documents</h3>
+      <p></p>
+      <h3 id="H3372306">How to share books</h3>
+      <p>Your contributors will need to have user accounts. If users do not have accounts then refer to the guide section 'What You'll Need to Get Started' for account creation instructions.</p>
+      <p>Navigate to the book site area and locate your book.</p>
+      <p>The to the right of your book click on the pencil icon and this will open up the 'sharing dialogue box.</p>
+      <p>On the left are you contacts. If you do not have any contact your will need to add them below using the add contacts icon. This will open a second dialogue box - here you will be able to invite people either via user name or email address. Once you add them you can close the dialogue box.</p>
+      <p>The users will receive an email inviting them to the project, they will also receive a notice on screen if they are logged into Fidus Writer.</p>
+      <p>Then you will need to move the users from the left to right column and give them the apppropriate access rights. For your contributors this will be as authors - make sure that the users have the pencil icon next to their name and not the eye icon, which is for viewing only.</p>
+      <p>You have now completed the process of granting users access to your publication project.</p>
+      <h2 id="H7934822">GitLab Community Edition (GitLab CE)</h2>
+      <p></p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="part">Publication Info</h1>
+    <div class="article-part article-title" id="_8_0">About the Guide</div>
+    <div class="article-part article-richtext article-body">
+      <p>Quick Start Guide – A Publishing Pipeline</p>
+      <p>Pre-release v0.1</p>
+      <p>Date: 2022</p>
+      <p>Creative Commons Attribution-ShareAlike 4.0 International&nbsp;<a href="https://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA 4.0)</a>.</p>
+      <p>DOI: 10.5281/zenodo.7043758</p>
+      <h2 id="H8229716">Description</h2>
+      <p></p>
+      <h2 id="H5465299">Contributors</h2>
+      <p>Author(s): Simon Worthington - ORCID <a href="https://orcid.org/0000-0002-8579-9717" title="https://orcid.org/0000-0002-8579-9717">0000-0002-8579-9717</a></p>
+      <h2 id="H2281570">Technical credits</h2>
+      <h3 id="H2431584">Layout design style</h3>
+      <p>Publication layout design style 'Report 001' is based on CSS Template from <strong>Interpunct</strong> – <em>full stack graphic design,</em> <a href="https://interpunct.dev/" title="https://interpunct.dev/">Interpunct.dev</a>. GNU General Public License (<a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>).</p>
+      <h3 id="H3168740">Images</h3>
+      <p>Illustrations <a href="https://blush.design/" title="https://blush.design/">Blush.design</a>. All Illustrations published on Blush can be used for free. License <a href="https://blush.design/license" title="https://blush.design/license">https://blush.design/license</a>.</p>
+      <p>Palette - <a href="https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000" title="https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000">https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000</a></p>
+      <p>Body: Black and Orange</p>
+      <p>Pink - EE4484</p>
+      <p>Blue - 2062AF</p>
+      <p>Orange - F68B1E</p>
+      <p>Green - 60BC55</p>
+      <p>Black - 000000</p>
+      <h3 id="H649993">Fonts</h3>
+      <p>All fonts are Open Licence Fonts.</p>
+      <p>Headers - <a href="https://fonts.google.com/specimen/Fira+Sans+Condensed" title="https://fonts.google.com/specimen/Fira+Sans+Condensed">Fira Sans Condensed</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. This project is led by Carrois, a type foundry based in Berlin. To contribute, see <a href="https://github.com/mozilla/Fira" title="https://github.com/mozilla/Fira">github.com/mozilla/Fira</a>.</p>
+      <p>Body - <a href="https://fonts.google.com/specimen/Fira+Sans" title="https://fonts.google.com/specimen/Fira+Sans">Fira Sans</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. This project is led by&nbsp;<a href="https://carrois.com/">Carrois</a>, a type foundry based in Berlin. To contribute, see&nbsp;<a href="https://github.com/mozilla/Fira">github.com/mozilla/Fira</a> </p>
+      <p>Logo - <a href="https://fonts.google.com/specimen/Source+Sans+Pro" title="https://fonts.google.com/specimen/Source+Sans+Pro">Source Sans Pro</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. Source® Sans Pro, Adobe's first open source typeface family, was designed by Paul D. Hunt. </p>
+      <h3 id="H319315">Open source software</h3>
+      <ul id="L52747921">
+        <li>
+          <p>Fidus Writer - </p>
+        </li>
+        <li>
+          <p>Vivliostyle - </p>
+        </li>
+        <li>
+          <p>GitLab Community Edition - </p>
+        </li>
+        <li>
+          <p>Docsify - </p>
+        </li>
+        <li>
+          <p>Draw.io - diagram editor <a href="https://github.com/jgraph/drawio" title="https://github.com/jgraph/drawio">https://github.com/jgraph/drawio</a></p>
+        </li>
+        <li>
+          <p>Inkscape - vector graphic editor</p>
+        </li>
+        <li>
+          <p>GIMP - image editor</p>
+        </li>
+        <li>
+          <p>Scribus - DTP</p>
+        </li>
+        <li>
+          <p>Thoth.pub - Metadata management </p>
+        </li>
+        <li>
+          <p>OpenRefine - data editing</p>
+        </li>
+        <li>
+          <p>Ghostscript and Ghostmarks - PDF bookmarks </p>
+        </li>
+        <li>
+          <p>Zenodo</p>
+        </li>
+        <li>
+          <p>Zotero</p>
+        </li>
+        <li>
+          <p>Weblate - translation</p>
+        </li>
+      </ul>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+\documentclass{article}
+
+\usepackage{caption}
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
+\begin{document}
+
+\title{Step 2: Create a Book Project in Fidus Writer}
+
+\maketitle
+
+
+The book project in Fidus Writer will act as an empty container for your publication, later on you can change all the file names and book information to reflect your books title and content. You can also add and remove documents at any time.
+
+
+\subsection{What's covered here}\label{H4535132}
+
+
+\begin{enumerate}
+\item Create a 'personal' folder (only you see this - it is not shared) for your book documents
+
+
+\item Create placeholder documents for your book parts
+
+
+\item Create a Fidus Writer book - a collation of book documents, make divisions into book parts 
+
+
+\item Connecting your book to a Git repo  
+
+
+\end{enumerate}
+
+In a later step sharing the book with your team will be covered.
+
+
+Full book configuration details can be found in 
+
+
+\subsection{1. Create a 'personal' folder}\label{H4439255}
+
+
+
+Here you will create a folder and after this create your documents in the folder. To start with you need to be in the Documents area of the website. 
+
+
+At the top of the page in the secondary menu click on 'Create New Folder'.
+
+
+PIC
+
+
+Give the folder a name
+
+
+PIC
+
+
+Now you will have an empty folder. If no documents are made in the folder and it is left empty the folder will not be saved.
+
+
+\subsection{2. Create placeholder documents }\label{H8214025}
+
+
+
+These are the placeholder document examples you will make:
+
+\begin{itemize}
+\item Front Matter: Where you will add imprint, contributor information, acknowledgements, etc.
+
+
+\item Section 1: A top level part of a book as section or chapter
+
+
+\item Section 2
+
+
+\item Section 3
+
+
+\item Back Matter: This can contain appendices, glossaries, abbreviations, etc.
+
+
+\end{itemize}
+
+\subsubsection{How to create documents}\label{H7006285}
+
+
+
+Navigate to 'Documents' area of the website. In the sub-menu below documents select 'Create new document' and choose 'Book Default' document template. If you are working on a special book or publication series you might use a different document template.
+
+
+Here you will add three documents as placeholders. These are added so you can configure your book basics, names and documents can be changed or deleted later. Make three documents with these name: Front Matter; Section 1, and; Back Matter.
+
+
+<add screen shots for document creation: 1. Add, 2. select doc template, 3. document title and document name, 4 Close document, document settings>
+
+\begin{figure}
+\scaledgraphics{9e5d1d14-244e-4d55-b1f9-effb37b619e9.png}{1}
+\caption*{Figure 1: Adding documents to be used in your book}\label{F35194901}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}
+\scaledgraphics{2be7082d-cf81-4659-be99-15f41a555f0a.png}{1}
+\caption*{Figure 2: Edit document and add a title}\label{F72135581}
+\end{figure}
+
+
+\subsection{3. Create a Fidus Writer book}\label{H642923}
+
+
+
+A Fidus Writer Book collects together a series of Fidus Writer documents. Here we will create a book and add your docs, as well as carry our some basic configurations of the book.
+
+
+Navigate to the Book section of the website.
+
+
+PIC
+
+
+Click 'Create new book'. You will be show a book dialogue box with a number of tabs: Basic information, Sections, Bibliography, Epub, Drucken / PDF, Validation, and Git repo.
+
+\begin{figure}
+\scaledgraphics{8a7e23ca-ece1-4c13-8192-e6b2ff7e5fc0.png}{1}
+\caption*{Figure 3}\label{F63655341}
+\end{figure}
+
+
+To start with you will only complete a few settings, you can return later to complete all of the book setup. Here we will fill out the title and add your documents.
+
+
+Add title.
+
+
+To add your documents move to the 'Sections' tab. Here you will see your Documents listed on the left, at the top your newly created 'folder'. Click the folder to display its contents. You can add your documents to the book by selecting them and clicking on the arrow in the middle to add them to the right column. Now save your book. The dialogue box will now close and you will see your book listed in the book section of the site.
+
+
+You can return later to complete all the book settings.
+
+
+PIC
+
+
+\subsection{4. Connecting your book to a Git repo}\label{H8269040}
+
+
+
+This part of the process only needs to be carried out by publication managers or users who will be outputting to Git. If the Git repo is public then any user will be able to see the saved content without any login credentials.
+
+
+You need to have created your Git repo which is covered in Step 1., this will repo will be where you save your book too.
+
+
+First we will connect Fidus Writer with the Git instance you are using, this is done by authorising Git to connect with Fidus Writer using you user accounts on both systems.
+
+
+1. Make sure you are logged into Git and Fidus Writer.
+
+
+2. From the Fidus Writer homepage navigate to your user profile at the top right and click on your user name, this will take you to your user profile page where you can connect with your Git instance in the 'social accounts area'.
+
+
+3. Click Connect next to the Git instance you want to connect to.
+
+
+PIC
+
+
+4. You will now be redirected to the Git website, you will need to login if you haven't already done so.
+
+
+PIC
+
+
+5. Then accept the Authorisation. This process connects your user accounts and allows the two systems to transfer your publication files.
+
+
+PIC
+
+
+The connection process is now complete and we will now select the repo for your book.
+
+
+6. Navigate to your book and click on it to open the book dialogue box. Clikc on the Gitrepository tab on the right.
+
+
+PIC
+
+
+7. Click 'Refesh' on the right to get your list of repos from Git. The repos will now be availabel in the drop down menu.
+
+
+PIC
+
+
+8. Select your repo from the list, then below all the output types should be checked, and click save.
+
+
+9. You can now export your book to Git. You will see your book listed in the Book site area. Select the checkbox for your book and in the menu above the checkbox to the left select 'Export to Git Repository'. A dialogue will appear asking for a Commit message, this is a note for this revision export.
+
+
+PIC
+
+
+A message dialogue will appear bottom right. When the message 'Your Book has been sucessfully save to Git' appears the process has finished. 
+
+
+PIC
+
+
+You can now navigate to Git and you will see your files on Git. That is the end of this process.
+
+
+PIC
+
+
+\subsection{Next steps}\label{H6619707}
+
+
+
+You can now invite your team to access the publication on Fidus Writer.
+
+
+
+
+
+
+
+
+
+
+\end{document}

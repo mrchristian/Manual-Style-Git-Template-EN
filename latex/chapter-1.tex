@@ -1,0 +1,205 @@
+\documentclass{article}
+
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{svg}
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
+\begin{document}
+
+\title{Welcome to the Publishing Pipeline!}
+
+\maketitle
+
+\begin{figure}
+\scaledgraphics{b3bc6ba5-db38-4ec8-89db-45c029fdb485.png}{0.75}
+\label{F98934631}
+\end{figure}
+
+
+The quick start guide is for you to learn how use the 'publishing pipeline' for making multi-format publications: reports, manuals, books, and papers, etc.
+
+
+The 'publishing pipeline' connects the word processor to publishing. What this mean for publication production is that from an online multi-user editor you can automatically create and typeset multi-format outputs – PDF, web, eBook, print-on-demand, and more – to file storage or live online. You can also make updates at any time across all format outputs from one single-source. 
+
+
+High quality layout designs are enables by combining pre-made templated 'layout design styles' with automate machine typesetting. This means that all the time-consuming layout design work is taken out of the production time-line and is done in advance, enabling a rapid publishing workflow.
+
+
+The quick start guide is for contributors and publication managers. Technical administrator and developers, and typesetting layout designers, should see the 'Admin Guide'.
+
+
+We'll be working with an online collaborative word processor and publishing to multi-format — PDF, web, e-book, mobile, print-on-demand, etc. — all using 'digital sovereign' open-source software and systems to ensure privacy and security, including: being self-hosted, GDPR compliance, and ecryption, and more.
+
+
+\subsection{What you'll need before you start}\label{H4632171}
+
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+\scaledgraphics{fec439eb-c4d6-4587-a4a2-affde7c45586.png}{0.25}
+\label{F18710661}
+\end{wrapfigure}
+
+
+See instructions in the 'What You'll Need to Get Started' section of this guide for creating all the accounts needed.
+
+
+\subsubsection{For contributors}\label{H5614484}
+
+
+
+Contributors will need the following.
+
+\begin{enumerate}
+\item An email address to receive account emails.
+
+
+\item A user account with the online word processors 'Fidus Writer'.
+
+
+\end{enumerate}
+
+\subsubsection{For publication managers}\label{H9374516}
+
+
+
+Publication managers will need the following.
+
+\begin{enumerate}
+\item An email address to receive account emails.
+
+
+\item A user account with the online word processor 'Fidus Writer'.
+
+
+\item GitLab or/and GitHub accounts, depending on which supported Git platform your using.
+
+
+\item Connect 'Fidus Writer' to your Git platform of choice.
+
+
+\end{enumerate}
+
+\subsection{The steps used to create a publication}\label{H3159430}
+
+
+\begin{enumerate}
+\item Create a Git repository and website
+
+
+\item Create a book (collation of documents)
+
+
+\item Invite the team
+
+
+\item How to publish multi-format
+
+
+\end{enumerate}
+
+\subsection{What you'll learn here}\label{H7757657}
+
+
+\begin{enumerate}
+\item Account creation for Fidus Writer, GitLab including GitLab.com and GitLab CE, and GitHub.
+
+
+\item How to prepare your public Git repository for storing your publication data, with an option to enable a website.
+
+
+\item GitLab Pages and GitHub Pages website creation.
+
+
+\item To setup your publication's online collaborative word processor.
+
+
+\item Invite your team to collaborate on writing online.
+
+
+\item How to publish.
+
+
+\end{enumerate}
+
+\subsection{Pipeline features}\label{H2087393}
+
+
+\begin{itemize}
+\item Collaborative work space: invite designers, editors, proofers, or reviews to work on a publication.
+
+
+\item Multi-format publication outputs: website, PDF, paginated web, eBook, and print-on-demand etc.
+
+
+\item Automatic typesetting and layout design styles, so no time consuming typesetting.
+
+
+\item Single-source publishing: Make an edit and distribute to all formats.
+
+
+\item Citation manager.
+
+
+\item Open-source software and 'pipeline architecture' designed for system integration.
+
+
+\item Git storage with versioning.
+
+
+\item Interoperable formats: JATS/XML, JSON, HTML, LaTeX, etc.
+
+
+\item Semantic structuring and enrichment: Linked Open Data (Use of terminology services and TDM), publication level PID, publication internal structure and for digital objects.
+
+
+\end{itemize}
+
+\subsection{System configurations and setting}\label{H4870876}
+
+
+
+To find out about Fidus Writer, Documents, and Book settings see the guide section 'System Configurations and Setting'.
+
+
+\subsection{Publication data structure}\label{H4820656}
+
+
+\begin{figure}
+\includesvg[width=0.75\textwidth]{65d2d40e-81bf-4867-ba23-b86a5869635d.svg}
+\caption*{Figure 1: System data model}\label{F86281041}
+\end{figure}
+
+
+\subsection{Digital sovereignty}\label{H6425485}
+
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\scaledgraphics{60a0cd01-c4e1-467e-a517-a5ae77dbbbaf.png}{0.5}
+\label{F43863211}
+\end{wrapfigure}
+
+
+The term 'digital sovereignty' is used here to describe the steps taken to ensure privacy of personal information and the security of content. Privacy and security are vital because of the encroachment of digital activity by corporations and states, by parties with malicious intent, or through accidental data loss.
+
+
+To ensure your 'digital sovereignty' we combine data security measures, adherance to privacy legislation such as European General Data Protection Regulation (GDPR), and readiness for privacy legislation of different juristications such as the California Consumer Privacy Act (CCPA), as well as transparency of code and data storage.
+
+
+The system can be self-hosted, is open-source, has full GDPR compliance, uses two factor authentication for admin areas, and OAuth authenication for authentication and authorization infrastructure (AAI) integration. 
+
+\end{document}
