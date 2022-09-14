@@ -1155,7 +1155,7 @@ ol.upper-latin {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 400px) and (max-width: 700px) {
     .article-body, section.fnlist , h1.article-bibliography-header, div.csl-bib-body, .article-body > figure.image-width-100, .article-body > table.table-100.table-fixed, blockquote  {
      margin-left: 0px!important;
     }
