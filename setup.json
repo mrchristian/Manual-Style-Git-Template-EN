@@ -1,6 +1,6 @@
 {
   "__comment": "Set values to false if no link should be created.",
-  "repoURL": "https://github.com/mrchristian/guide-2-de/",
+  "repoURL": "https://github.com/mrchristian/guide-de/",
   "repoBranch": "main",
   "vivlioURL": "https://vivliostyle.org/viewer/"
 }
