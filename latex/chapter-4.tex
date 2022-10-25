@@ -1,156 +1,193 @@
 \documentclass{article}
 
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
 \begin{document}
 
-\title{Step 3: Invite Your Team}
+\title{Schritt 1: Veröffentlichung Git Repo und Website}
 
 \maketitle
 
 
-You can invite contributors to your publication project and give them access to project documents and book.
+Das Git-Repository (Repo) ist der Speicherort Ihrer erstellten Publikation, welcher sich im Internet befindet. Aus dem Repository kann auch eine Präsentations-Website erstellt werden, auf der ausgewählte Inhalte veröffentlicht werden. Wenn Ihr Repository aktualisiert wird, aktualisiert sich auch Ihre Website.
 
+\begin{figure}
+\scaledgraphics{d80dc5a5-d385-4a3b-a03a-a752ff2686c9.png}{1}
+\caption*{Foto 1: Beispiel für ein Git-Repository (repo)}\label{F86948651}
+\end{figure}
 
-\textbf{Note:} This setup is so that contributors can edit documents and preview the book publication as PDF, e-book, etc., without being able to export the publication to Git, change the order of sections (chapters), or edit other book information and settings.
+\begin{figure}
+\scaledgraphics{0aea86b5-871e-4b80-95ca-5b030854029d.png}{1}
+\caption*{Foto 2: Beispiel für eine mit GitHub/Lab Pages erstellte Publikationswebsite, die eine Präsentation des obigen Repositorys ist. Der Pfeil zeigt die Links zu den anderen verfügbaren Formaten}\label{F80434841}
+\end{figure}
 
 
-If you do not have an account yet as a contributor or as a publication manager you need to have your team added as users then see account creation in the guide section 'What You'll Need to Get Started'.
+\subsection{Über Git}\label{H9482233}
 
 
-For contributors access to a publication is a three part process:
 
-\begin{enumerate}
-\item First, the user has to accept being a contact of yours.
+Das Repository verwendet die \href{https://git-scm.com/}{Git-Technologie}\footnote{Git ist eine Open-Source-Software, auf der sowohl \href{https://git-scm.com/}{GitHub} als auch \href{https://about.gitlab.com/}{GitLab} aufgebaut sind.}, die die Formatierung von Dateien ermöglicht und zum Speichern Ihrer Veröffentlichung verwendet wird.
 
 
-\item Second, you grant document editing access, and 
+Das System bietet die Möglichkeit, GitLab CE, GitLab.com oder GitHub zu verwenden. GitLab kann als GitLab.com oder als selbst gehostete Instanz für öffentliche und private Veröffentlichungen oder für die Bereitstellung von Veröffentlichungen für die spätere Übertragung auf ein drittes System, entweder GitHub oder GitLab.com, verwendet werden. Wir verwenden GitLab Community Edition (GitLab CE), eine Open-Source-Software, für die eigenständige Betreuung. GitHub ist keine Open-Source-Software, eignet sich aber für die Verbreitung und Sichtbarkeit von Publikationen.
 
+\begin{figure}
+\scaledgraphics{7de3d3b1-1706-4dde-a73d-2bd35c02487f.png}{1}
+\caption*{Foto 3: Git logos - Git; GitLab, and; GitHub}\label{F72941601}
+\end{figure}
 
-\item Third, you can give view-only access to the book so that users can download previews.  
 
+\subsection{Schritt-für-Schritt-Anleitung}\label{H7833693}
 
-\end{enumerate}
 
-Team members can also be give access for different roles, these roles are described at the end of the section, as:
 
-\begin{enumerate}
-\item reviewer with commenting only on documents; 
+Diese Anleitung bezieht sich auf die Verwendung von GitHub. Die Grundsätze sind die gleichen für GitLab.
 
 
-\item as an editor with track changes permissions on documents;
+Mit diesen Schritten können Sie eine Ablage für Ihre Publikation mit der Option zur Erstellung einer Website über Git (Hub/Lab) Pages erstellen.
 
 
-\end{enumerate}
+\subsubsection{Ein Repository erstellen}\label{H7778151}
 
-\subsection{1. Adding users as Contacts}\label{H3777938}
 
 
+Um Ihr Repository zu erstellen, verwenden wir ein Vorlagen-Repository.
 
-In the homepage of Fidus Writer navigate to your user icon top right and from the drop-down menu select Contacts.
 
+Sie erstellen ein Repository, das vom Template Repo vorausgefüllt wird, damit Sie später den Inhalt Ihrer Publikation hinzufügen können. Die Repository-Ablage enthält Komponenten zur Erstellung der Website und zur Bereitstellung von Links zu anderen Publikationsformaten, die auf der Website als Links angezeigt werden.
 
-PIC
 
+Es gibt eine Reihe von Vorlagen, die Sie verwenden können. Sprechen Sie dies mit Ihrem Publikationsmanager ab, welcher Ihnen sagen kann, welche Vorlage Sie verwenden sollen. Als Beispiel finden Sie hier eine Vorlage auf GitHub aus der \href{https://github.com/TIBHannover/ADA-Book-Template}{ADA-Pipeline}, die von der Deutschen Zentralbibliothek für Technikwissenschaften (TIB) gepflegt wird.
 
-You will see an empty page if you have no contacts yet or a list of contacts.
 
+Navigieren Sie zu dem Link für die Vorlage und klicken Sie auf die grüne Schaltfläche "Diese Vorlage verwenden".
 
-PIC
+\begin{figure}
+\scaledgraphics{0ce6c9ea-6817-4c0d-b56b-93b0dcd88ac8.png}{1}
+\caption*{Foto 4: Beispiel für ein Vorlagen-Repository. Verwenden Sie das Vorlagen-Repositorium, um Ihr Publikations-Repositorium vorzufüllen}\label{F95809581}
+\end{figure}
 
 
-Click add contacts top left, you can add contacts here by username or email address. Each contact added will be notified about your contact request and will need to approve the request.
+Wählen Sie dann den Ort, an dem Sie die neue Ablage anlegen möchten, und ihren Namen. Klicken Sie anschließend auf "Repository aus dieser Vorlage erstellen".
 
+\begin{figure}
+\scaledgraphics{e61a310c-a521-4f60-81ba-bdfacba7ef99.png}{1}
+\caption*{Foto 5: Legen Sie Eigentümer (Standort), Name und Beschreibung fest. Dann speichern}\label{F59276791}
+\end{figure}
 
-PIC
 
+\textbf{Wo speichern Sie Ihre Ablage?} In GitHub können Sie Repos mit Organisationen oder in Ihrem persönlichen Konto speichern, wählen Sie dies unter dem Feld "Eigentümer" aus.
 
-The user will get a notice in Fidus Writer and as email about the contact request, and then they need to accept the request. The notice will come up as a pop-up request for them to click through to contacts. Also, they can always visit their contact areas to check on your request.
 
+\textbf{Wie benennen Sie Ihre Ablage?} Der Name des Repos ist sein Anzeigename und seine URL-Adresse. Es empfiehlt sich, einen Namen zu wählen, der mit anderen Veröffentlichungen übereinstimmt, z. B. ein Kurztitel oder sogar ein Akronym. Beachten Sie, dass im Namen nur Kleinbuchstaben verwendet werden sollten, da bei der URL Groß- und Kleinschreibung beachtet wird. Die Namen können jederzeit geändert werden, allerdings werden dadurch auch die zugehörigen URLs geändert.
 
-PIC 1
 
+\textbf{Hinweis:} Die Namen der Repos können jederzeit geändert werden, allerdings wird dadurch die URL der Website auf den neuen Namen geändert. Es gilt daran zu denken, die URL an anderen Stellen zu aktualisieren, an denen Sie die URL-Adresse bereits verwendet haben.
 
-PIC 2
 
+\textbf{Andere Einstellungen:} Sie können dem Projektarchiv eine Beschreibung geben; die Voreinstellung ist, dass das Projektarchiv öffentlich ist. Klicken Sie dann auf die grüne Schaltfläche, um Ihre Einstellungen zu speichern.
 
-You can see the status of your invite for a contact in your contacts view area.
 
+Herzlichen Glückwunsch, Sie haben nun Ihre Ablage erstellt und einen Ort gefunden, an dem Sie Ihre Publikationen speichern können.
 
-PIC
 
+\subsubsection{Erstellen Sie eine GitHub/Lab Pages-Website}\label{H3055126}
 
-If you have problem adding contact then get in touch with administration support, and they can help check on the status of invites etc. All personal information is used in strict adherence to GDPR and principles of Digital Sovereignty where users always have to grant explicit access to their personal data.
 
 
-\subsection{2. Giving users access to edit documents}\label{H9350209}
+GitHub bietet einen Dienst namens „GitHub Pages“ an. Damit werden kostenlose Websites unter der Domain github.io erstellt, oder Sie können Ihren eigenen benutzerdefinierten Bereich verwenden. Das Standard-URL-Adressmuster ist https://organisation-name.github.io/publication-name/. Der Inhalt Ihres Projektarchivs wird auf der Website unter der angegebenen URL verfügbar sein.
 
 
+Hinweis: Websites können mit benutzerdefinierten Domainnamen versehen werden. Hierfür müssen Sie die GitHub-Dokumentation konsultieren, um die Funktion zu aktivieren.
 
-Navigate to the Fidus Writer home and the documents area and from there into the directory you made in the earlier step in the guide. Here you will see a list of your publication documents.
 
+Dies ist ein zweiteiliger Prozess.
 
-PIC Docs top level
 
+\subsubsection{Teil 1: Aktivieren Sie die Erstellung von GitHub/Lab Pages-Websites}\label{H327158}
 
-PIC list of documents in directory
 
+\begin{figure}
+\scaledgraphics{e61a310c-a521-4f60-81ba-bdfacba7ef99.png}{1}
+\caption*{Foto 6: Schalten Sie Seiten ein. Besuchen Sie die Registerkarte "Einstellungen"; den linken Menüpunkt "Seiten"; setzen Sie ihn auf "Haupt" und "Stamm".}\label{F96677601}
+\end{figure}
 
-In the directory select the top checkboxes above all the document checkboxes this will turn on and off (toggle) the selection of all the documents, then click the drop-down icon and select 'Share' from the drop-menu.
 
+Navigieren Sie zu "Einstellungen" in den oberen horizontalen Registerkartenoptionen. Wählen Sie in den Einstellungen im linken Menü "Seiten" aus. Nehmen Sie im Dialog auf der Hauptseite die folgenden Einstellungen vor: Wählen Sie den Zweig "Main“; danach wählen Sie den Ordner "Root“, und klicken Sie auf "Speichern“. Damit ist die Erstellung der Seite abgeschlossen und Sie erhalten eine URL für Ihre Website. Kopieren Sie die URL und verwenden Sie sie, um die Adresse auf die Vorderseite des Repo einzufügen.
 
-PIC share
+\begin{figure}
+\scaledgraphics{c95e502b-6265-4634-98c4-a310aaa0ba5b.png}{1}
+\caption*{Foto 7: Schalten Sie Seiten ein. Besuchen Sie die Registerkarte "Einstellungen"; den linken Menüpunkt "Seiten"; setzen Sie ihn auf "Haupt" und "Stamm".}\label{F72487461}
+\end{figure}
 
 
-You will now see the share dialogue box. Add users by moving them from the left to the right column and edit icon next to each user and change it from the view (eye icon) to edit (pencil icon) to give them full edit access, otherwise they will only be able to view documents. And then save your sharing settings. 
+Um den Namen der Website auf der Vorderseite Ihres Repo einzufügen, gehen Sie zunächst zur Vorderseite des Repo, indem Sie auf der linken Seite der horizontalen Registerkarten Ihres Repo auf "Code“ klicken. Klicken Sie im Anschluss auf der rechten Seite auf das Zahnrad neben "About“. Hier können Sie die URL einfügen und speichern.
 
+\begin{figure}
+\scaledgraphics{217faf4f-364b-4d7f-b5cd-ff3483ed5e08.png}{1}
+\caption*{Foto 8: Sie können den Namen der Publikation und die URL-Adresse in die Infobox eingeben, die dann auf der Vorderseite des Repos angezeigt wird.}\label{F41996561}
+\end{figure}
 
-The sharing task for documents is now complete.
 
+Sie haben nun eine Website und die Adresse erscheint oben rechts.
 
-If you add a new user or new document - then repeat parts 1. and 2. again.
+\begin{figure}
+\scaledgraphics{f4544e29-1d39-4948-a754-7554fcddb8ad.png}{1}
+\caption*{Foto 9: Nach der Eingabe werden der Name und die URL-Adresse oben rechts angezeigt.}\label{F98414411}
+\end{figure}
 
 
-\subsection{3. Sharing your book for view only and preview download}\label{H6251349}
+Ihre Website wird wie folgt aussehen. Derzeit enthält die Website Benchmark-Inhalte, um anzuzeigen, dass die Layout-Funktionen korrekt funktionieren. Dieser Inhalt wird mit Ihren Inhalten ersetzt, sobald Sie Ihre Publikation veröffentlicht haben.
 
+\begin{figure}
+\scaledgraphics{29112ec9-518c-4a92-a6fc-237fc26b41b8.png}{1}
+\caption*{Foto 10: Zu Beginn wird Ihre Website mit Benchmark-Testinhalten aus der Vorlage versehen sein. Später, bei der Ausgabe aus Fidus, wird dies überschrieben.}\label{F91564721}
+\end{figure}
 
 
-You want your contributors to be able to view the book settings and preview the complete book in its different typeset layout formats, but prevent them from publishing the book or directly rearranging book sections or selecting a new layout typesetting style, etc.
+\subsubsection{Teil 2: Anzeigen von Multiformat-Inhalten auf GitHub/Lab-Seiten}\label{H5915252}
 
 
-In this part we will share the book with the same users as before in documents, but with the permissions as view only.
 
+Um die paginierte Webversion Ihrer Publikation zu aktivieren, muss die Repo-Adresse zur setup.json-Datei auf der obersten Ebene Ihres Repos hinzugefügt werden.
 
-1. Navigate to the book site area of Fidus Writer and locate your book.
+\begin{figure}
+\scaledgraphics{937e8cc0-b575-4ebe-acc3-4faf51c83ced.png}{1}
+\caption*{Foto 11: Suchen Sie die Datei setup.json in der obersten Ebene Ihres Repos. Klicken Sie darauf, um sie anzuzeigen und zu bearbeiten}\label{F8474601}
+\end{figure}
 
 
-PIC
+Bearbeiten Sie die Datei „setup.json“ und fügen Sie den Organisationsnamen und den Repo-Namen in Zeile 3 ein, speichern Sie anschließend unten auf der Seite, "repoURL": "https://github.com/organisation-name/publication-name/".
 
+\begin{figure}
+\scaledgraphics{8e9e4c18-b941-4173-b655-fe716a42a060.png}{1}
+\caption*{Foto 12: Zum Bearbeiten klicken Sie auf das Bleistiftsymbol oben rechts. Bearbeiten Sie dann Zeile 3 und ändern Sie die Adresse Ihres Repos}\label{F65883321}
+\end{figure}
 
-2. To the right of your book click the pencil icon. This will bring up the sharing dialogue box. As before with sharing documents move the users from the left column to the right column to share the document with them. The difference this time is that we're going to leave the users as view only (eye icon).
 
+Alle Schritte Ihrer Git-Einrichtung sind nun abgeschlossen.
 
-Once you have completed this part the sharing setup is completed.
 
+\subsection{Schritt 1 ist abgeschlossen: Wie geht es weiter?}\label{H2358897}
 
-PIC view
 
 
-\subsection{Adding reviewer and editors to documents}\label{H5018454}
-
-
-
-For documents, you have the option to set a users access rights as view only, comment only, or as track changes only.
-
-
-These setting are useful for reviewers and editors.
-
-
-PIC showing drop-down
-
-
-\subsection{Next steps}\label{H4422568}
-
-
-
-Next we will look at outputting your publication to Git. This will be the fourth and final step in this guide for your publication workflow.
+Jetzt, wo Sie Ihr Repo und Ihre Website eingerichtet haben, richten Sie als Nächstes ein Buchprojekt in Fidus Writer ein und verbinden es mit Ihrem Git-Repo, damit Sie Buchdateien aus Fidus Writer in Git übertragen können.
 
 \end{document}

@@ -2,86 +2,300 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>About the Guide</title>
+    <title>Schritt 4: Als Multiformat veröffentlichen!</title>
     <link type="text/css" rel="stylesheet" href="css/book.css" />
     <link type="text/css" rel="stylesheet" href="css/report001.css" />
   </head>
-  <body class="book-chapter publicationinfo">
-    <h1 class="part">Publication Info</h1>
-    <div class="article-part article-title" id="_7_0">About the Guide</div>
+  <body class="book-chapter vierstufigerprozess">
+    <div class="article-part article-title" id="_7_0">Schritt 4: Als Multiformat veröffentlichen!</div>
     <div class="article-part article-richtext article-body">
-      <p>Quick Start Guide – A Publishing Pipeline</p>
-      <p>Pre-release v0.1</p>
-      <p>Date: 2022</p>
-      <p>Creative Commons Attribution-ShareAlike 4.0 International&nbsp;<a href="https://creativecommons.org/licenses/by-sa/4.0/">(CC BY-SA 4.0)</a>.</p>
-      <p>DOI: 10.5281/zenodo.7043758</p>
-      <h2 id="H8229716">Description</h2>
-      <p></p>
-      <h2 id="H5465299">Contributors</h2>
-      <p>Author(s): Simon Worthington - ORCID <a href="https://orcid.org/0000-0002-8579-9717" title="https://orcid.org/0000-0002-8579-9717">0000-0002-8579-9717</a></p>
-      <h2 id="H2281570">Technical credits</h2>
-      <h3 id="H2431584">Layout design style</h3>
-      <p>Publication layout design style 'Report 001' is based on CSS Template from <strong>Interpunct</strong> – <em>full stack graphic design,</em> <a href="https://interpunct.dev/" title="https://interpunct.dev/">Interpunct.dev</a>. GNU General Public License (<a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>).</p>
-      <h3 id="H3168740">Images</h3>
-      <p>Illustrations <a href="https://blush.design/" title="https://blush.design/">Blush.design</a>. All Illustrations published on Blush can be used for free. License <a href="https://blush.design/license" title="https://blush.design/license">https://blush.design/license</a>.</p>
-      <p>Palette - <a href="https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000" title="https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000">https://coolors.co/ee4484-2062af-f68b1e-60bc55-000000</a></p>
-      <p>Body: Black and Orange</p>
-      <p>Pink - EE4484</p>
-      <p>Blue - 2062AF</p>
-      <p>Orange - F68B1E</p>
-      <p>Green - 60BC55</p>
-      <p>Black - 000000</p>
-      <h3 id="H649993">Fonts</h3>
-      <p>All fonts are Open Licence Fonts.</p>
-      <p>Headers - <a href="https://fonts.google.com/specimen/Fira+Sans+Condensed" title="https://fonts.google.com/specimen/Fira+Sans+Condensed">Fira Sans Condensed</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. This project is led by Carrois, a type foundry based in Berlin. To contribute, see <a href="https://github.com/mozilla/Fira" title="https://github.com/mozilla/Fira">github.com/mozilla/Fira</a>.</p>
-      <p>Body - <a href="https://fonts.google.com/specimen/Fira+Sans" title="https://fonts.google.com/specimen/Fira+Sans">Fira Sans</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. This project is led by&nbsp;<a href="https://carrois.com/">Carrois</a>, a type foundry based in Berlin. To contribute, see&nbsp;<a href="https://github.com/mozilla/Fira">github.com/mozilla/Fira</a> </p>
-      <p>Logo - <a href="https://fonts.google.com/specimen/Source+Sans+Pro" title="https://fonts.google.com/specimen/Source+Sans+Pro">Source Sans Pro</a>. These fonts are licensed under the&nbsp;<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">Open Font License</a>. Source® Sans Pro, Adobe's first open source typeface family, was designed by Paul D. Hunt. </p>
-      <h3 id="H319315">Open source software</h3>
-      <ul id="L52747921">
+      <p>Hier erfahren Sie, wie Sie Folgendes tun können: Ausgabe Ihrer Publikation als Website, Seiten-Website, PDF und E-Book.</p>
+      <p>Zunächst kann das System viele Ausgaben aus einer Quelle als "Publication Ready Outputs" (PROs)<a href="#fn2" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="2"></span></a> erstellen sowie zusätzliche interoperable und maschinenlesbare Formate ausgeben.</p>
+      <p>Das System kann vorgefertigte, wiederverwendbare Vorlagen von <strong>'Layout-Designstilen'</strong> mit automatisiertem Maschinensatz anwenden.</p>
+      <p>Die gestalteten Ausgabeformate können auf Knopfdruck in Git gespeichert werden, oder es kann eine Vorschau der Ausgaben direkt vom System aus erfolgen. <strong>Hinweis:</strong> Das PDF-Format muss lokal gespeichert und dann in Git hochgeladen werden (dies wird in naher Zukunft, im September 2022, automatisiert werden).</p>
+      <h2 id="H9177340">Ausgabeformate, die wir hier behandeln</h2>
+      <ol id="L31551861">
         <li>
-          <p>Fidus Writer - </p>
+          <p>Website (responsiv für die mobile Ansicht)</p>
         </li>
         <li>
-          <p>Vivliostyle - </p>
+          <p>Paginiertes Web (das bedeutet, dass Sie Seiten wie ein Buch im Browser haben, im Gegensatz zu der standardmäßigen einzelnen Bildlaufseite eines Browsers)</p>
         </li>
         <li>
-          <p>GitLab Community Edition - </p>
+          <p>PDF</p>
         </li>
         <li>
-          <p>Docsify - </p>
+          <p>Print-on-Demand (PDF)</p>
         </li>
         <li>
-          <p>Draw.io - diagram editor <a href="https://github.com/jgraph/drawio" title="https://github.com/jgraph/drawio">https://github.com/jgraph/drawio</a></p>
+          <p>e-Book</p>
+        </li>
+      </ol>
+      <p>Weitere Formatausgaben sind im Abschnitt Systemkonfigurationen und -einstellungen aufgeführt.</p>
+      <table id="T34310601" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="table">
+        <caption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Tabelle</span><span class="text">Starter-Ausgabeformate. Es sind noch weitere Formate verfügbar, aber für den Anfang werden wir die unten aufgeführten abdecken.</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p><strong>Formats &gt;&gt;&gt;</strong></p>
+            </th>
+            <th>
+              <p>1. Website</p>
+            </th>
+            <th>
+              <p>2. Paginated Web</p>
+            </th>
+            <th>
+              <p>3. PDF</p>
+            </th>
+            <th>
+              <p>4. Print-on-Demand (PDF)</p>
+            </th>
+            <th>
+              <p>5. e-Book</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Beispiele</strong></p>
+            </td>
+            <td>
+              <p>Beispiele (<a href="https://tibhannover.github.io/ADA-Book-Template/" title="https://tibhannover.github.io/ADA-Book-Template/">Benchmark Template</a>)</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+            <td>
+              <p>-</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Eigenschaften</strong></p>
+            </td>
+            <td>
+              <p>Mobile first responsive</p>
+            </td>
+            <td>
+              <p>Fixed page</p>
+            </td>
+            <td>
+              <p>Screen PDF (symmetrische linke und rechte Ränder)</p>
+            </td>
+            <td>
+              <p>Drucken von jeweils einem Exemplar. (recto - verso Ränder)</p>
+            </td>
+            <td>
+              <p>Verwendung auf E-Readern und Vertrieb über den Buchhandel.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Running header / footer</strong></p>
+            </td>
+            <td>
+              <p>Im linken Menü platziert</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>n /a</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Datum (benutzerdefinierte Formate)</strong></p>
+            </td>
+            <td>
+              <p>Im linken Menü platziert</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>Inline</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Version (aus Fidus Buch Version Nr.)</strong></p>
+            </td>
+            <td>
+              <p>Im linken Menü platziert</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p>ja</p>
+            </td>
+            <td>
+              <p></p>
+            </td>
+            <td>
+              <p>Inline</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><strong>Fidus-Exporte, die zur Erstellung von Ausgabeformaten verwendet werden.</strong> </p>
+            </td>
+            <td>
+              <p>UHTML<a href="#fn3" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="3"></span></a></p>
+            </td>
+            <td>
+              <p>UHTML</p>
+            </td>
+            <td>
+              <p>PDF</p>
+            </td>
+            <td>
+              <p>PDF + Abdeckung PDF (separat hergestellt)<a href="#fn4" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="4"></span></a></p>
+            </td>
+            <td>
+              <p>EPUB</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h6 id="fn-a3nx"></h6>
+      <h2 id="H2960848">Vorschau der Ausgaben</h2>
+      <p>Sie können jede Ihrer Ausgaben lokal aus dem Fenster der Buchdialoge herunterladen. Auf der Schaltfläche „Exportieren“ unten rechts finden Sie ein Menü mit den folgenden Exportoptionen:</p>
+      <ul id="L91505231">
+        <li>
+          <p>EPUB</p>
         </li>
         <li>
-          <p>Inkscape - vector graphic editor</p>
+          <p>HTML</p>
         </li>
         <li>
-          <p>GIMP - image editor</p>
+          <p>UHTML</p>
         </li>
         <li>
-          <p>Scribus - DTP</p>
+          <p>LaTeX</p>
         </li>
         <li>
-          <p>Thoth.pub - Metadata management </p>
+          <p>Drucken / PDF (Wählen Sie im Dialogfeld "Drucken" Ihres Browsers aus, ob Sie drucken, oder als PDF speichern möchten. Lassen Sie die Hintergrundgrafiken eingeschaltet und die Ränder auf "keine" gesetzt)</p>
+        </li>
+      </ul>
+      <figure id="F72393411" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/d0eba562-a5b7-49ad-a5ca-0588aeabc968.png">
+        <figcaption><span class="label-counter" data-book-counter="35" data-chapter-counter="1">Foto</span><span class="text">Buch zur Vorschau exportieren</span></figcaption>
+      </figure>
+      <h2 id="H4196815">Anwenden von Layout-Designstilen und Git-Export</h2>
+      <h3 id="H3054847">Wählen Sie einen Multiformat-Stil</h3>
+      <p>1. Navigieren Sie zum Bereich „Bücher“ der Website und klicken Sie hier auf Ihr Buch, um dessen Dialogfeld zu öffnen.</p>
+      <figure id="F57417271" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/255a3f43-9cd0-4af1-b087-623a55474e14.png">
+        <figcaption><span class="label-counter" data-book-counter="36" data-chapter-counter="2">Foto</span><span class="text">Wählen Sie einen Buchlayoutstil</span></figcaption>
+      </figure>
+      <p>2. Wählen Sie auf der Registerkarte "Drucken/PDF" Ihren Buch-Layoutstil aus. Als Beispiel können Sie "Report 001" für ein DIN A4 orientiertes Layout verwenden. Wenn Sie einen Stil auswählen, werden alle Ihre Ausgaben gesetzt, und Sie können den Stil jederzeit ändern oder Stile hinzufügen und ändern.</p>
+      <h3 id="H3514598">Ein E-Book-Cover hinzufügen</h3>
+      <p>Für Ihr E-Book müssen Sie auf der Registerkarte "Epub" Ihrer Buchinformationen ein Titelbild hinzufügen. Sie können hier eine Bilddatei hochladen. Das Bild kann vom Cover Ihrer PDF-Datei oder aus einer anderen Quelle stammen. Verwenden Sie eine JPEG-Datei mit einer Größe von 2560 Pixel x 1600 Pixel oder einer ähnlichen Größe. E-Book-Plattformen verlangen unterschiedliche Größen, hier wurde die Amazon Kindle-Größen vom Januar 2022 als Anlehnung verwendet.</p>
+      <p>Tipp: Nehmen Sie die erste Seite Ihrer PDF-Ausgabe und verwenden Sie sie als Umschlag. Rendern Sie die PDF-Seite 1 in einem Grafikprogramm und speichern Sie sie als JP'EG. Zum Beispiel mit dem Open-Source-Bildbearbeitungsprogramm GIMP (GNU Image Manipulation Program).</p>
+      <figure id="F15207771" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/3a695184-36ad-4037-8f67-6d535bd2ef98.png">
+        <figcaption><span class="label-counter" data-book-counter="37" data-chapter-counter="3">Foto</span><span class="text">Ein E-Book-Cover hinzufügen</span></figcaption>
+      </figure>
+      <p>Mit dem Open-Source-E-Reader Calibre können Sie eine Vorschau Ihres E-Books auf Ihrem lokalen Rechner anzeigen.</p>
+      <h3 id="H6601276">Nach Git exportieren</h3>
+      <p><strong>Hinweis:</strong> Wenn Ihr Git-Repository öffentlich ist, wird Ihr Buch dadurch öffentlich. Repos können öffentlich oder privat gemacht werden.</p>
+      <p>1. Wählen Sie im Dialogfeld "Buch" die Registerkarte "Git-Repository" auf der rechten Seite aus.</p>
+      <p>2. Wählen Sie auf der Registerkarte "Git-Repository" folgendes aus: das Repository, in dem Sie speichern möchten (dieses ist bereits ausgewählt, wenn Sie die frühere Anleitung verwendet haben); die gewünschten Ausgabeformate und wählen Sie dann auf der Schaltfläche "Exportieren" unten rechts "In Git-Repository exportieren" aus.</p>
+      <figure id="F38533511" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/e8845c51-1622-4ec7-aa72-ee8b7e6abe4f.png">
+        <figcaption><span class="label-counter" data-book-counter="38" data-chapter-counter="4">Foto</span><span class="text">Registerkarte Git; Repo auswählen; Ausgaben wählen und exportieren</span></figcaption>
+      </figure>
+      <p>3. Es erscheint nun ein Git-Dialog mit der Bezeichnung "Commit message". Dabei handelt es sich um einen Vermerk über den Export in Git, der in der Dateiliste für diesen Git-Export angezeigt wird. Der Zweck der Notiz ist es, andere Teammitglieder oder Git-Benutzer über Ihren Export zu informieren, z. B. welche Art von Aktualisierungen vorgenommen wurden. Eine Commit-Nachricht sollte informativ sein, hierbei können Sie Ihren eigenen Stil wählen. Wobei zu beachten ist, dass diese öffentlich sein kann, wenn das Git-Repository öffentlich ist.</p>
+      <p>Klicken Sie auf "Speichern", und der Export wird gestartet. Das System informiert Sie unten rechts über den Fortschritt.</p>
+      <figure id="F33749451" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/7d590885-49d2-47f1-8431-ab0deae1809e.png">
+        <figcaption><span class="label-counter" data-book-counter="39" data-chapter-counter="5">Foto</span><span class="text">Fügen Sie Ihre Git-"Commit-Nachricht" hinzu. Dies ist eine Notiz, damit andere wissen, was in Git gespeichert wurde</span></figcaption>
+      </figure>
+      <p>4. Sie können nun Ihre Bucheinstellungen im Dialogfeld "Buch" speichern.</p>
+      <p>5. Ihr Export ist nun abgeschlossen, und Ihre Publikation ist nun auf Git veröffentlicht.</p>
+      <figure id="F3226031" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/d80dc5a5-d385-4a3b-a03a-a752ff2686c9.png">
+        <figcaption><span class="label-counter" data-book-counter="40" data-chapter-counter="6">Foto</span><span class="text">Git Repo-Ansicht. Nachdem Sie Ihre Veröffentlichung exportiert haben, sehen Sie die Dateien hier</span></figcaption>
+      </figure>
+      <figure id="F13437801" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/0aea86b5-871e-4b80-95ca-5b030854029d.png">
+        <figcaption><span class="label-counter" data-book-counter="41" data-chapter-counter="7">Foto</span><span class="text">Git-Seiten. Dies ist das Website-Portal zu Ihrer Veröffentlichung</span></figcaption>
+      </figure>
+      <p>Beim Git-Export können Sie festlegen, ob die Git-Inhalte öffentlich oder privat sein sollen. Außerdem können Sie Inhalte manuell oder automatisch an andere Speicherorte oder Systeme verteilen lassen. Dies sind Einstellungen und Konfigurationen, die in Git vorgenommen werden. Diese Anweisungen finden Sie im vollständigen Handbuch.</p>
+      <h2 id="H7212347">PDF nach Git exportieren</h2>
+      <p>PDF-Ausgaben müssen lokal gespeichert und dann in Git hochgeladen werden.</p>
+      <p>In diesem Beispiel erstellen wir unsere lokale PDF-Datei im Browser, speichern sie lokal und melden uns dann im Browser bei Git an, um die PDF-Datei hochzuladen.</p>
+      <p>1. Wählen Sie im Dialogfeld "Buch bearbeiten" die Option "Drucken/PDF exportieren" in der Export-Schaltfläche unten rechts aus.</p>
+      <figure id="F9611051" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/1046d398-157b-4a6e-a913-6b8e0c0a3c49.png">
+        <figcaption><span class="label-counter" data-book-counter="42" data-chapter-counter="8">Foto</span><span class="text">Dialogfeld "PDF-Export aus Buch</span></figcaption>
+      </figure>
+      <p>2. Jetzt wird das Dialogfeld Drucken/PDF-Export Ihres Browsers angezeigt, und es müssen einige Einstellungen überprüft werden, bevor die PDF-Datei auf Ihrem Computer gespeichert werden kann.</p>
+      <p>a. Legen Sie die Ausgabe als PDF fest.</p>
+      <p>b. Setzen Sie den Rand auf keinen.</p>
+      <p>c. Aktivieren Sie das Kontrollkästchen Hintergrundgrafiken einschließen.</p>
+      <p>Klicken Sie nun auf "Speichern" und nennen Sie die PDF-Datei "book.pdf". <strong>Es ist wichtig, die Bezeichnung "book.pdf" zu verwenden</strong>, da Git dann die PDF-Datei erkennt und sie der Website hinzufügt, die es mit Git Pages erstellt. Speichern Sie die Datei lokal.</p>
+      <figure id="F45019311" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/adc93bc9-4c8b-49e7-8628-6cbc54625f47.png">
+        <figcaption><span class="label-counter" data-book-counter="43" data-chapter-counter="9">Foto</span><span class="text">Drucken , PDF-Einstellung und Speichern</span></figcaption>
+      </figure>
+      <p>3. Laden Sie nun die Datei in Git hoch. Navigieren Sie in Ihrem Browser zu Ihrem Repo und melden Sie sich bei Git an.</p>
+      <figure id="F99448091" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/339fafc3-0e4a-49b0-96b0-4f0376eb7eb0.png">
+        <figcaption><span class="label-counter" data-book-counter="44" data-chapter-counter="10">Foto</span><span class="text"> 1: Laden Sie Ihre PDF-Datei in das Repository hoch</span></figcaption>
+      </figure>
+      <p>Nun befinden Sie sich in der obersten Ansicht Ihres Projektarchivs und können die Datei book.pdf hochladen. Klicken Sie oben rechts auf „Dateien hinzufügen“, wählen Sie Ihre book.pdf-Datei aus, fügen Sie eine 'Commit-Nachricht' hinzu und klicken Sie auf Hochladen. Ihre book.pdf-Datei muss sich in der obersten Ebene Ihres Repos befinden. Dies können Sie der untern angefügten Bildschirmaufnahme entnehmen.</p>
+      <p>Der Vorgang ist nun abgeschlossen und in Kürze wird die PDF-Datei im Menü oben rechts auf Ihrer Website erscheinen.</p>
+      <figure id="F3799511" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="photo"><img src="images/0aea86b5-871e-4b80-95ca-5b030854029d.png">
+        <figcaption><span class="label-counter" data-book-counter="45" data-chapter-counter="11">Foto</span><span class="text">Alle Formate sind oben rechts aufgelistet</span></figcaption>
+      </figure>
+      <h2 id="H2975996">Konfigurationen für die Veröffentlichung in mehreren Formaten</h2>
+      <p>Sie können eine Vielzahl von publikationsfertigen Ausgabeformaten sowie interoperable Formate für eine Reihe verschiedener Verwendungszwecke ausgeben. Ebenso können Sie die wichtigsten Quelldateien von Fidus Writer als JSON-Dateien übernehmen.</p>
+      <p>Weitere Informationen über andere Formate und erweiterte Einstellungen finden Sie im vollständigen Handbuch.</p>
+      <h3 id="H1730107">Empfohlene minimale Standardausgabe für Git</h3>
+      <p>Die Ausgabe einer Website, einer paginierten Webversion, eines PDF und eines E-Books ist für Leser ausreichend. Wählen Sie für diese Einstellung: UHTML, PDF als Ausgabetypen in den Git-Einstellungen, und Sie haben alles, was Sie für diese Ausgaben brauchen.</p>
+      <h3 id="H9499495">Erstellen von Print-on-Demand-Publikationen</h3>
+      <p>Der vollständige Prozess für Print-on-Demand (PoD)-Ausgaben liegt außerhalb des Rahmens dieses Leitfadens, aber hier ist ein Überblick über die beteiligten Schritte.</p>
+      <p>Als Einführung in PoD handelt es sich um ein Druckverfahren, bei dem Sie Ihr Buch bei einer Druckerei hinterlegen können, die es Kunden weltweit im Internet über Buchhandelswebsites zur Verfügung stellt. Wenn der Kunde ein Buch bestellt, wird es als Einzelexemplar vor Ort gedruckt und an Ihn versandt. Als Verleger müssen Sie nicht für den Druck oder den Versand aufkommen, sondern dies wird von der Zahlung des Kunden abgezogen. Als Verleger werden Sie für den Verkauf entschädigt, abzüglich der Buchkosten. Sie können auch Ihre eigenen Großbestellungen aufgeben, da die Druckkosten im Großhandel anfallen.</p>
+      <p>Die Ingram-Dienste Lightning Source und Ingram Spark sind gute Beispiele für PoD-Dienste.</p>
+      <p>PoD kann auch für private Veröffentlichungen genutzt werden, die nur intern verwendet werden.</p>
+      <p>Wenn Sie die Publikation vertreiben möchten, benötigen Sie eine ISBN-Nummer. Sie benötigen keine ISBN, wenn Sie PoD ausschließlich für private Aufträge mit Büchern nutzen, die Sie nicht öffentlich vertreiben.</p>
+      <h4 id="H9836255">Schritte zur Aktivierung von Print-on-demand</h4>
+      <ul id="L63139881">
+        <li>
+          <p>Erstellen Sie ein Konto bei einem PoD-Anbieter wie Ingram Lightning Source für professionelles PoD oder Ingram Spark für einmaliges Self-Publishing.</p>
         </li>
         <li>
-          <p>OpenRefine - data editing</p>
+          <p>Erstellen Sie ein Buchcover und laden Sie Ihren im PoD-System erstellten Buchblock hoch. PoD-Cover müssen eine Vorderseite, einen Buchrücken und eine Rückseite sowie einen Buchrücken haben, die je nach Seitenzahl unterschiedlich groß sind.</p>
         </li>
         <li>
-          <p>Ghostscript and Ghostmarks - PDF bookmarks </p>
+          <p>Legen Sie den Verkaufspreis fest. Der Preis kann einen Überschuss ermöglichen, kostendeckend sein oder sogar subventioniert werden.</p>
         </li>
         <li>
-          <p>Zenodo</p>
-        </li>
-        <li>
-          <p>Zotero</p>
-        </li>
-        <li>
-          <p>Weblate - translation</p>
+          <p>Veröffentlichen. Ihr Buch wird dann bei vielen Einzelhändlern veröffentlicht, und Sie werden monatlich für die Verkäufe entschädigt.</p>
         </li>
       </ul>
     </div>
-    <section class="fnlist" role="doc-footnotes"></section>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn2" role="doc-footnote" data-chapter-counter="1" data-book-counter="2">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="2"></span>Eine publikationsfertige Ausgabe (PRO) bedeutet, dass das Format für eine professionelle Veröffentlichung bereit ist, einschließlich Schriftsatz, Metadaten und anderer Formatierungen und Einstellungen. Viele Systeme können Dateien in einem bestimmten Format speichern, z. B. als HTML oder PDF - aber das bedeutet nicht, dass es professionell verwendet werden kann. Microsoft Word kann zwar als HTML oder PDF speichern, macht aber aus den formatierten Dateien keine fertigen Publikationen, die für den Vertrieb geeignet sind.</p>
+      </section>
+      <section id="fn3" role="doc-footnote" data-chapter-counter="2" data-book-counter="3">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="3"></span>UHTML - Dies steht für vereinheitlichtes HTML. Der Fidus-Exporter verkettet alle Dokument-HTML-Dateien zu einer einzigen HTML-Datei.</p>
+      </section>
+      <section id="fn4" role="doc-footnote" data-chapter-counter="3" data-book-counter="4">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="4"></span>Umschlag PDF. Covers für Print-on-Demand (PoD) müssen derzeit aufgrund unterschiedlicher Anforderungen der PoD-Drucker separat erstellt werden.</p>
+      </section>
+    </section>
   </body>
 </html>

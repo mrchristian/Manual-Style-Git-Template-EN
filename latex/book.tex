@@ -1,22 +1,8 @@
 \documentclass[11pt]{book}
 
-                
-\usepackage{authblk}
-                
-\makeatletter
-                
-\let\@fnsymbol\@alph
-                
-\makeatother
-            
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{wrapfig}
-                
-\usepackage[backend=biber,hyperref=false,citestyle=authoryear,bibstyle=authoryear]{biblatex}
-                
-\bibliography{bibliography}
-            
 \usepackage{svg}
 \usepackage{graphicx}
                 
@@ -36,9 +22,9 @@
             
 \usepackage{tabu}
 \usepackage{docmute}
-\title{Quick Start Guide}
-\author{NextGenBooks}
-\date{Draft v0.1}
+\title{Anleitung }
+\author{Team Digital}
+\date{Pre-release v0.1 DE}
 \begin{document}
 \maketitle
 \def\title#1{\chapter{#1}}
@@ -46,22 +32,24 @@
 
         \input{chapter-1}
         
-\part{Four Step Process}
         \input{chapter-2}
         
         \input{chapter-3}
         
+\part{Vierstufiger Prozess }
         \input{chapter-4}
         
         \input{chapter-5}
         
-\part{Configurations}
         \input{chapter-6}
         
-\part{Publication Info}
         \input{chapter-7}
         
+\part{Informationen zur Veröffentlichung}
+        \input{chapter-8}
+        
+\part{Anhang}
+        \input{chapter-9}
+        
 
-
-\printbibliography[title={Bibliography}]
 \end{document}

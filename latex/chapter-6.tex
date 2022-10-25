@@ -1,350 +1,242 @@
 \documentclass{article}
 
+\usepackage{caption}
+\usepackage{graphicx}
                 
-\usepackage{authblk}
+\usepackage{calc}
                 
-\makeatletter
+\newlength{\imgwidth}
                 
-\let\@fnsymbol\@alph
+\newcommand\scaledgraphics[2]{%
                 
-\makeatother
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
             
-\usepackage{hyperref}
-\author{Simon Worthington\thanks{mrchristian001@gmail.com}}
-\affil{The Web}
-
-
 \begin{document}
 
-\title{System Configurations and Settings}
+\title{Schritt 3: Laden Sie Ihr Team ein}
 
 \maketitle
 
-\begin{abstract}
+
+\textbf{Dieser Bereich ist für }\emph{\textbf{Publikationsmanager}}\textbf{ gedacht.}
 
 
-Abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum ante, tempor sagittis nunc. Etiam felis nulla, consectetur a tempor quis, luctus vel massa. Vestibulum pharetra ultricies urna at consequat. Donec volutpat enim sed lectus venenatis aliquet non ut lectus. Vivamus at orci eget arcu tempor pretium ut id.
-
-\end{abstract}
+Sie können Mitwirkende zu Ihrem Publikationsprojekt einladen und ihnen Zugriff auf die Projektdokumente, sowie Büchern gewähren.
 
 
-\subsection{Introduction}\label{H9202894}
+\textbf{Hinweis:} Mitwirkende können Dokumente bearbeiten und eine Vorschau der Buchveröffentlichung als PDF, E-Book und vieles mehr anzeigen, ohne die Veröffentlichung in Git zu exportieren oder andere Konfigurationen eines Buches zu ändern, z. B. um die Reihenfolge der Abschnitte (Kapitel) oder andere Buchinformationen und Einstellungen zu bearbeiten.
 
 
-
-Listed here are key features of system parts with accompanying descriptions.
-
-\begin{quote}
+Wenn Ihr Team noch keine Konten besitzt, lesen Sie den Abschnitt "Was Sie für den Einstieg benötigen", um sie als Benutzer zum System hinzuzufügen.
 
 
-
-Block quote example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum eros placerat vehicula luctus. Nulla mattis congue gravida. Aenean pulvinar, neque et tincidunt pellentesque, sapien augue sodales ipsum, eget tempor.
-
-
-\end{quote}
-
-
-\subsection{Fidus Writer}\label{H3154410}
-
-
-
-\href{https://www.fiduswriter.org/}{Fidus Writer} is the collaborative editor and publishing system. Fidus Writer is licensed under the open source AGPL v.3 license. The sourcecode is available here: \href{http://github.com/fiduswriter}{github.com/fiduswriter}.
-
-
-Fidus Writer functionality can be extended with plugins.
-
-
-Fidus Writer has eight main areas:
+Der Zugang zu einer Publikation ist \textbf{ein dreiteiliger Prozess} für Autoren:
 
 \begin{enumerate}
-\item Documents
+\item Zunächst muss \textbf{der Benutzer verifizieren, dass er ein Kontakt von Ihnen ist.}
 
 
-\item Bibliography
+\item Danach gewähren Sie den Zugriff auf \textbf{die Bearbeitung von Dokumenten}, und
 
 
-\item Images
-
-
-\item Templates
-
-
-\item Books
-
-
-\item User account
-
-
-\item Administration
-
-
-\item Styles - documents and books
-
-
-\item Exporters
+\item Zuletzt genehmigen Sie den Benutzern einen "Nur-Ansichts-Zugang“ zum Buch, \textbf{damit diese Vorschauen herunterladen können.}
 
 
 \end{enumerate}
 
-\subsubsection{General }\label{H1068085}
+Teammitglieder können auch für verschiedene Rollen freigeschaltet werden, z. B. als Rezensenten oder Redakteure:
 
+\begin{enumerate}
+\item \textbf{Prüfer} hat die Berechtigung, Dokumente zu kommentieren, und;
 
 
-PIC logged out - support, lang
+\item \textbf{Redakteur} besitzt lediglich die Berechtigung, Änderungen an Dokumenten zu verfolgen.
 
 
-Message Support - look for the speech bubble icon top right, or bottom right.
+\end{enumerate}
 
+Die Einstellungen für diese Rollen werden am Ende des Abschnitts beschrieben.
 
-Interface language - this is set when you first use Fidus Writer and can be changed with the drop down, bottom right.
 
+\subsection{1. Hinzufügen von Benutzern als Kontakte}\label{H5896646}
 
-Software version number - use browser view sourcecode to read software version number. See line 10: e.g., <meta name="version" content="3.10.26">.
 
 
-Keyboard shortcuts - Shift+CTRL+/
+Jeder Benutzer in Fidus Writer hat Kontakte. Ein Benutzer muss zunächst ein Kontakt sein, bevor er eingeladen werden kann, um Zugang zu Ihren Dokumenten oder Büchern erhalten zu können.
 
 
-\subsubsection{1. Documents}\label{H1552973}
+Navigieren Sie auf der Startseite von Fidus Writer zu Ihrem Benutzersymbol oben rechts und wählen Sie aus dem Dropdown-Menü "Kontakte“.
 
+\begin{figure}
+\scaledgraphics{4d32eb57-f1d6-4bf1-8730-247ee912be96.png}{1}
+\caption*{Foto 1: Kontakte hinzufügen - oben rechts}\label{F39011101}
+\end{figure}
 
 
-\subsubsection{Document view}\label{H2380763}
+Sie werden eine leere Seite sehen, wenn Sie noch keine Kontakte haben, oder eine Liste mit Kontakten.
 
+\begin{figure}
+\scaledgraphics{8587b0fe-b0f6-4603-b19b-31eca1ab07da.png}{1}
+\caption*{Foto 2: Kontakt einladen - oben links. Liste der Kontakte}\label{F79849051}
+\end{figure}
 
 
-PIC Docs
+ 
 
 
-Document saving - document are saved automatically in real-time, what you see on the screen will be saved. There is no need to use a save command.
+Klicken Sie oben links auf "Kontakte einladen" und fügen Sie Ihre Kontakte mittels des Benutzernamens oder der E-Mail-Adresse hinzu. Jeder hinzugefügte Kontakt wird über Ihre Kontaktanfrage benachrichtigt und muss die Anfrage annehmen.
 
 
-Collaborative editing priority - Fidus Writer can be set with different priorities for which users edits or main server edit queue takes priority. The default setting is that the server takes priority, meaning it is the order in which edits arrive that takes priority rather than a designated user.
+Wenn die Person noch kein Fidus Writer-Konto hat, müssen Sie mittels E-Mail-Adresse die Person eingeladen, ein Konto zu erstellen.
 
+\begin{figure}
+\scaledgraphics{3a1c9501-2029-440a-af1e-7e7a71d59ad0.png}{1}
+\caption*{Foto 3: Dialogfeld "Benutzer einladen". E-Mail-Adresse oder Benutzernamen hinzufügen, um den Benutzer einzuladen}\label{F79384891}
+\end{figure}
 
-Collaborative editor visibily - if anther user is live on a document you will see their avatars top right.
 
+Der Benutzer erhält über die Kontaktanfrage sowohl eine Benachrichtigung über Fidus Writer, sowie eine E-Mail, welche im Anschluss angenommen werden muss. Wenn der Benutzer bei Fidus Writer angemeldet ist, erscheint die Benachrichtigung als Pop-up-Anfrage, damit er sich zu den Kontakten durchklicken kann. Außerdem können Sie jederzeit ihre Kontaktbereiche besuchen, um Ihre Anfrage zu überprüfen.
 
-Chat messaging collaborative editors - if users are live on a document you can use the chat function, bottom right. Messaging is only live when users are active. Chat is not saved and is not asynchronous.
 
+Sie können den Status einer Einladung für einen Kontakt in Ihrem Kontaktbereich einsehen. Der Status einer Einladung ändert sich zu "Benutzer" sobald der Kontakt die Anfrage angenommen hat.
 
-Comments - select text and a comment icon will appear right. Click to add comment.
+\begin{figure}
+\scaledgraphics{bea36502-ae28-444b-a70f-7fd8917ed085.png}{1}
+\caption*{Foto 4: Der Status einer Einladung ist Notizen als Benutzer, wenn die Einladung angenommen wurde.}\label{F51031911}
+\end{figure}
 
 
-Spelling and grammar checking - see the \textbf{Tools} menu. Red indicated spelling, Blue grammar. Right click items to see suggested changes. Close spellcheck with \textbf{Tools > Spell/grammar check > Remove marks}. The function uses the open source software LanguageTool open source - \href{https://languagetool.org/}{https://languagetool.org/} 
+Wenn Sie Probleme beim Hinzufügen von Kontakten haben, wenden Sie sich an den Verwaltungssupport, der Ihnen helfen kann, den Status der Einladungen zu überprüfen. Alle personenbezogenen Daten werden unter strikter Einhaltung der DSGVO und der Grundsätze der digitalen Souveränität verwendet, wobei die Nutzer immer ausdrücklich Zugang zu ihren personenbezogenen Daten gewähren müssen.
 
 
-Using Fidus Writer offline - TBC
+\subsection{2. Benutzern den Zugang zur Bearbeitung von Dokumenten gewähren}\label{H2959514}
 
 
-Document settings - Optional sections; Citation style; Document style; Text language; Paper size, Copyright information.
 
+\textbf{Hinweis:} Als Ersteller von Dokumenten werden Sie automatisch zum Dokumenteneigentümer. Jedes Dokument kann lediglich einen Dokumenteneigentümer besitzen. Nur der Eigentümer eines Dokuments kann die Freigabeeinstellungen bearbeiten. Benutzer, die Sie einladen, können alle Teile eines Dokuments bearbeiten. Dies beinhaltet zudem das Löschen von Dokumenten, da wir Ihnen mit der Freigabe den Schreibzugriff zu allen Dokumente gewähren. Sie können den Zugriff auch folgendermaßen einstellen: Verfolgtes Schreiben (Änderungen nachverfolgen); Kommentar, oder; Lesen (nur lesen).
 
-Inserting Ciations - see the book icon in the toolbar. Citations can be added manually or imported from online databases, e.g., Europe PubMed Central.
 
+Navigieren Sie zur Startseite von Fidus Writer und zum Bereich „Dokumente“ und von dort aus in das Verzeichnis, das Sie im vorherigen Schritt der Anleitung erstellt haben. Hier sehen Sie eine Liste Ihrer Publikationsdokumente.
 
-Document name and document title - these are two different entities that can be linked. To start with the document title that is written into the document creates the document name. But if you want to have a different document name you need to edit the field as it appear above the document when in docuemnt editing view. Both of these parts are only edited in the document edit view.
+\begin{figure}
+\scaledgraphics{257455fd-bc94-461a-a77e-7b0bc27dc03d.png}{1}
+\caption*{Foto 5: Publikationsdokumente}\label{F62151421}
+\end{figure}
 
 
-PIC document name, document title
+Aktivieren Sie im Verzeichnis die oberen Kontrollkästchen über allen Dokumenten, um die Auswahl aller Dokumente ein- und auszuschalten, klicken Sie dann auf das Dropdown-Pfeilsymbol und wählen Sie "Teilen" aus dem Dropdown-Menü.
 
+\begin{figure}
+\scaledgraphics{4aaf5a28-7970-4f78-bb98-e1232313f54b.png}{1}
+\caption*{Foto 6: Wählen Sie alle Dokumente aus, indem Sie das Kontrollkästchen über den Dokumenten aktivieren. Beachten Sie, dass das Dropdown-Menü für die Freigabe aus dem Pfeil nach unten rechts neben dem Kontrollkästchen besteht.}\label{F49894591}
+\end{figure}
 
-\subsubsection{Document manager view}\label{H7829280}
 
+Sie sehen nun das Dialogfeld für die Freigabe. Fügen Sie Benutzer hinzu, indem Sie sie von der linken in die rechte Spalte verschieben, und ändern Sie das Symbol neben jedem Benutzer von "Anzeigen" (Augensymbol) in "Bearbeiten" (Bleistiftsymbol) um, um Ihnen vollen Bearbeitungszugriff zu gewähren, anderenfalls können Benutzer:innen die Dokumente nur anzeigen. Speichern Sie im Anschluss Ihre Freigabeeinstellungen.
 
+\begin{figure}
+\scaledgraphics{2b3de32d-4d3e-4e7c-9161-6d7d37b1c232.png}{1}
+\caption*{Foto 7: Wählen Sie den Menüpunkt Freigeben aus dem Dropdown-Dokumentenmenü}\label{F11743441}
+\end{figure}
 
-PIC doc manager
 
+Die Freigabe von Dokumenten ist nun abgeschlossen.
 
-Create a document - choose a document template from the menu. A document template determines the structure of the document. Once a document template is set it cannot be changed.
 
+\textbf{Wenn Sie einen neuen Benutzer oder ein neues Dokument hinzufügen, wiederholen Sie die Teile 1. und 2. um die Freigabe zu ermöglichen.}
 
-Upload a Fidus Writer document - this is used primarily for uploading document revisions.
 
+\subsection{3. Freigabe des Buchs zur Ansicht und zum Download der Vorschau}\label{H5996080}
 
-Search
 
 
-Sort documents
+Sie möchten, dass Ihre Mitwirkenden die Möglichkeit haben, die Bucheinstellungen einzusehen und eine Vorschau des gesamten Buches in seinen verschiedenen Satzlayoutformaten zu sehen, aber Benutzer:innen sollen nicht in der Lage sein, das Buch zu veröffentlichen, direkt Buchabschnitte neu anzuordnen oder einen neuen Satzstill für das Layout auszuwählen.
 
 
-Document selector and actions - select one or all docs with top selector. Share, copy, export, etc. 
+In diesem Teil werden wir das Buch für Benutzer:innen freigeben wie zuvor, mit dem Unterschied, dass diese nun nur berechtigt sind, Dokumente "\textbf{Nur anzeigen}" zu lassen.
 
 
-Open documents
+1. Navigieren Sie hierfür zum Bereich "Bücher“ von Fidus Writer und suchen Sie Ihr Buch.
 
+\begin{figure}
+\scaledgraphics{a2dd5291-f50f-43c5-a251-a2696cf99f7c.png}{1}
+\caption*{Foto 8: Bereich der Buchseite}\label{F10022161}
+\end{figure}
 
-Access document revisions
 
+2. Klicken Sie rechts neben Ihrem Buch auf das Bleistiftsymbol. Daraufhin wird das Dialogfeld für die gemeinsame Nutzung angezeigt. Wie bei der Freigabe von Dokumenten verschieben Sie die Benutzer von der linken Spalte in die rechte Spalte, um das Dokument mit Ihnen zu teilen. Der Unterschied besteht diesmal darin, dass wir die Benutzer \textbf{als reine Betrachter (Augensymbol)} berechtigen.
 
-Share documents
 
+Sobald Sie diesen Teil abgeschlossen haben, ist die Einrichtung der Freigabe insgesamt abgeschlossen.
 
-\subsection{Books}\label{H6665750}
+\begin{figure}
+\scaledgraphics{307a65dd-0aa1-43ba-97aa-0811ec5d396a.png}{1}
+\caption*{Foto 9: Teilen Sie Ihre Veröffentlichung. Bearbeiten Sie das Bleistiftsymbol rechts neben dem Buch. Fügen Sie dann im Dialogfeld des Buches in der rechten Spalte weitere Benutzer:innen hinzu und setzen Sie sie auf Bearbeiten (Bleistiftsymbol).}\label{F50686771}
+\end{figure}
 
 
+\subsection{Hinzufügen von Prüfern und Bearbeitern zu Dokumenten}\label{H5555602}
 
-\subsubsection{Automatically generated parts of a book}\label{H7619734}
 
 
+\subsection{Hinzufügen von Prüfern und Bearbeitern zu Dokumenten}\label{H4871756}
 
-Some parts of the book are generated automatically and cannot be edited directly and may depend on book settings, document templates, book styles, or specific format output filters. 
 
 
-These parts are listed here.
+Für Dokumente besitzen Sie die Möglichkeit, die Zugriffsrechte eines Benutzers auf "Nur anzeigen", "Nur kommentieren" oder "Nur Änderungen Nachverfolgen" festzulegen.
+
+
+Diese Einstellungen sind für Prüfer und Redakteure nützlich.
+
+\begin{figure}
+\scaledgraphics{ab818b4d-2c97-46c1-94eb-b3c6f50a112a.png}{1}
+\caption*{Foto 10: Optionen für die Freigabe von Dokumenten für Mitwirkende und Überprüfer (Basis: Schreiben, Schreiben mit Spuränderung, Kommentar, Lesen. Rezension: keine Kommentare, Rezension, Reviewer mit nachverfolgten Änderungen)}\label{F40650491}
+\end{figure}
+
+
+\subsubsection{Basic (Mitwirkende)}\label{H2272325}
+
 
 \begin{itemize}
-\item Covers
+\item Schreiben
 
 
-\item Table of Contents
+\item Schreiben mit Spuränderung
 
 
-\item Page numbering
+\item Kommentar
 
 
-\item Page headers and footers
-
-
-\item References and footnotes: Placement as page notes or end notes, citation style
-
-
-\item List of figures and tables
-
-
-\item Section title pages
-
-
-\item Placement of blank pages. e.g., before section titles.
-
-
-\item Title page, and other front matter content divisions and styles
+\item Lesen
 
 
 \end{itemize}
 
-\subsubsection{Book setting and configurations}\label{H3989750}
+\subsubsection{Rezension}\label{H6146355}
 
 
 \begin{itemize}
-\item Basic book information
+\item Keine Kommentare
 
 
-\item Book sections
+\item Rezension
 
 
-\item Bibliographic citation style
-
-
-\item EPUB covers
-
-
-\item Printing / PDF - this is where the book layout style is set, as well as page size.
-
-
-\item Validator - this check through documents for comments and track changes
-
-
-\item Git - this is reserved for Publication Managers 
+\item Reviewer mit nachverfolgten Änderungen
 
 
 \end{itemize}
 
-\subsubsection{Images}\label{H9336653}
+\subsection{Nächste Schritte}\label{H8503735}
 
 
 
-Create categories - categories are useful for organising your images used in a publication, publication series, or withing a team or department.
-
-
-Upload images - JPG, PNG, and SVG images can be uploaded.
-
-
-\subsubsection{References}\label{H6668129}
-
-
-
-
-
-
-\subsection{Templates}\label{H7350400}
-
-
-
-
-
-
-\subsection{User account}\label{H8460509}
-
-
-
-
-
-
-\subsection{Administration}\label{H4807452}
-
-
-
-
-
-
-\subsection{Styles}\label{H5511626}
-
-
-
-
-
-
-\subsection{Exporters}\label{H6892689}
-
-
-
-
-
-
-\subsection{Contacts and sharing}\label{H8001298}
-
-
-
-\subsubsection{How to share documents}\label{H3072165}
-
-
-
-
-
-
-\subsubsection{How to share books}\label{H3372306}
-
-
-
-Your contributors will need to have user accounts. If users do not have accounts then refer to the guide section 'What You'll Need to Get Started' for account creation instructions.
-
-
-Navigate to the book site area and locate your book.
-
-
-The to the right of your book click on the pencil icon and this will open up the 'sharing dialogue box.
-
-
-On the left are you contacts. If you do not have any contact your will need to add them below using the add contacts icon. This will open a second dialogue box - here you will be able to invite people either via user name or email address. Once you add them you can close the dialogue box.
-
-
-The users will receive an email inviting them to the project, they will also receive a notice on screen if they are logged into Fidus Writer.
-
-
-Then you will need to move the users from the left to right column and give them the apppropriate access rights. For your contributors this will be as authors - make sure that the users have the pencil icon next to their name and not the eye icon, which is for viewing only.
-
-
-You have now completed the process of granting users access to your publication project.
-
-
-\subsection{GitLab Community Edition (GitLab CE)}\label{H7934822}
-
-
-
-
-
-
-
+Als Nächstes werden wir uns mit der Ausgabe Ihrer Publikation in Git befassen. Dies ist der vierte und letzte Schritt in diesem Leitfaden für Ihren Publikations-Arbeitsablauf.
 
 \end{document}
