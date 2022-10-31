@@ -1,6 +1,6 @@
-## Report Style Git Template DE
+## Report Style Git Template EN
 
-German version
+English version
 
 Pre-release v0.1
 
