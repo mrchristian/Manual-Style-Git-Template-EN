@@ -1,10 +1,22 @@
-## Quick Start Guide – A Publishing Pipeline
+## Report Style Git Template DE
 
 German version
 
 Pre-release v0.1
 
 Date: 2022
+
+## How to use the Template
+
+The template is intended for use with the Fidus Pipeline styles Report 001 / 002 etc.
+
+Use the GitHub Template repository function.
+
+Sample content for Web and Page Web have been provided.
+
+See the 'Quick Start Guide' for instructions.
+
+Different Git Templates are needed for different languages (as of Oct. 2022).
 
 Creative Commons Attribution-ShareAlike 4.0 International ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
 
