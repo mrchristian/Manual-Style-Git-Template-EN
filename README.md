@@ -1,6 +1,6 @@
 ## Quick Start Guide – A Publishing Pipeline
 
-English version
+German version
 
 Pre-release v0.1
 
