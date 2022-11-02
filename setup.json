@@ -1,6 +1,6 @@
 {
   "__comment": "Set values to false if no link should be created.",
-  "repoURL": "https://github.com/mrchristian/report-style-git-template-EN",
+  "repoURL": "https://github.com/user or org/your-repo-name",
   "repoBranch": "main",
   "vivlioURL": "https://vivliostyle.org/viewer/"
 }
